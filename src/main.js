@@ -1,3 +1,4 @@
+console.log("Start to load");
 import "../modules/drag-drop-touch.js";
 console.log("drag-drop-touch loaded");
 import "./shims.js";
