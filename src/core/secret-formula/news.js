@@ -1639,7 +1639,7 @@ export const news = [
     id: "a271",
     text:
       `<i style='border: 0.1rem solid black; border-radius: 50%; padding: 0.4rem; color: #2196F3; background: white;
-      cursor: pointer;' class='fas fa-volume-up' onClick='(function(){new Audio("audio/news.mp3").play();})();'>
+      cursor: pointer;' class='fas fa-volume-up' onClick='(function(){new Audio("./public/audio/news.mp3").play();})();'>
       </i> This news message is a test of "News 2.0". News 2.0 will feature things like the ability to listen to
       an audio version of any news message!`
   },
@@ -2302,7 +2302,7 @@ export const news = [
   {
     id: "a355",
     text:
-      `<div style='background: url("./images/unsmith.png"); width: 2.3rem; height: 2.5rem; margin-top: -0.1rem'></div>`
+      `<div style='background: url("./public/images/unsmith.png"); width: 2.3rem; height: 2.5rem; margin-top: -0.1rem'></div>`
   },
   {
     id: "a356",
