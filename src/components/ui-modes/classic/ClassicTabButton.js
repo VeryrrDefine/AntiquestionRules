@@ -46,7 +46,7 @@ export default {
     "
     class="o-tab-btn"
     @click="tab.show(true)"
-    data-v-class-tab-button
+    data-v-classic-tab-button
   >
     {{ tabName }}
     <div
