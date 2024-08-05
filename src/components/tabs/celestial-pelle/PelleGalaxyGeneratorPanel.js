@@ -1,4 +1,4 @@
-import wordShift from "../../../core/word-shift.js";
+﻿import wordShift from "../../../core/word-shift.js";
 
 import PelleUpgrade from "./PelleUpgrade.js";
 
@@ -85,7 +85,7 @@ export default {
         @click="toggleCollapse"
         data-v-pelle-galaxy-generator-panel
       />
-      Galaxy Generator
+      银河系制造器
     </div>
     <div
       v-if="!isCollapsed"
@@ -94,16 +94,16 @@ export default {
     >
       <div v-if="isUnlocked">
         <div>
-          You have a total of
+          你有总共
           <span
             class="c-galaxies-amount"
             data-v-pelle-galaxy-generator-panel
           >{{ galaxyText }}</span>
-          Galaxies.
+          银河系.
           <span
             class="c-galaxies-amount"
             data-v-pelle-galaxy-generator-panel
-          >+{{ format(galaxiesPerSecond, 2, 1) }}/s</span>
+          >+{{ format(galaxiesPerSecond, 2, 1) }}/第二</span>
         </div>
         <div>
           <button
@@ -131,14 +131,14 @@ export default {
                 class="c-big-text"
                 data-v-pelle-galaxy-generator-panel
               >
-                Sacrifice your {{ capRiftName }}
+                牺牲 你的 {{ capRiftName }}
               </span>
               <span
                 v-else
                 class="c-big-text"
                 data-v-pelle-galaxy-generator-panel
               >
-                Getting rid of all that {{ capRiftName }}...
+                获得骑行从 {{ capRiftName }}...
               </span>
             </div>
             <div
@@ -146,7 +146,7 @@ export default {
               class="c-increase-cap-text c-medium-text"
               data-v-pelle-galaxy-generator-panel
             >
-              {{ format(generatedGalaxies, 2) }} / {{ format(cap, 2) }} Galaxies generated
+              {{ format(generatedGalaxies, 2) }} / {{ format(cap, 2) }} 银河系 制造了
             </div>
           </button>
         </div>
@@ -169,7 +169,7 @@ export default {
         @click="unlock"
         data-v-pelle-galaxy-generator-panel
       >
-        Unlock the Galaxy Generator
+        Unlock the 银河系 制造器
       </button>
     </div>
   </div>

@@ -1,4 +1,4 @@
-export default {
+﻿export default {
   name: "BigCrunchButton",
   data() {
     return {
@@ -109,32 +109,32 @@ export default {
     <template v-if="!canCrunch">
       Reach {{ format(infinityGoal, 2, 2) }}
       <br>
-      antimatter
+      反问题
     </template>
 
     <!-- Can Crunch in challenge -->
     <template v-else-if="inAntimatterChallenge">
-      Big Crunch to
+      大嘎吱嘎吱 to
       <br>
-      complete the challenge
+      complete the 盘问
     </template>
 
     <!-- Can Crunch -->
     <template v-else>
       <div v-if="!showIPRate" />
       <b>
-        Big Crunch for
+        大嘎吱嘎吱 for
         <span :style="amountStyle">{{ format(gainedIP, 2) }}</span>
-        <span v-if="showIPRate"> IP</span>
-        <span v-else> Infinity {{ pluralize("Point", gainedIP) }}</span>
+        <span v-if="showIPRate"> 网络地址</span>
+        <span v-else> {{ pluralize("无穷远点", gainedIP) }}</span>
       </b>
       <template v-if="showIPRate">
         <br>
-        Current: {{ format(currentIPRate, 2) }} IP/min
+        Current: {{ format(currentIPRate, 2) }} 网络地址/最小
         <br>
-        Peak: {{ format(peakIPRate, 2) }} IP/min
+        Peak: {{ format(peakIPRate, 2) }} 网络地址/最小
         <br>
-        at {{ format(peakIPRateVal, 2) }} IP
+        at {{ format(peakIPRateVal, 2) }} 网络地址
       </template>
       <div v-else />
     </template>

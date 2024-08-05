@@ -1,4 +1,4 @@
-export default {
+﻿export default {
   name: "InfinityPointsHeader",
   data() {
     return {
@@ -19,7 +19,7 @@ export default {
   >
     You have
     <span class="c-infinity-tab__infinity-points">{{ format(infinityPoints, 2) }}</span>
-    {{ pluralize("Infinity Point", infinityPoints) }}.
+    无穷远点.
   </div>
   `
 };

@@ -1,0 +1,6 @@
+*.zip
+*.7z
+/ADFrame-master/*
+*.cfg
+*.config
+/*cache*

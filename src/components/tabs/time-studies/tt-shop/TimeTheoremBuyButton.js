@@ -1,4 +1,4 @@
-export default {
+﻿export default {
   props: {
     budget: Decimal,
     cost: Decimal,
@@ -38,7 +38,7 @@ export default {
     :class="enabledClass"
     @click="action"
   >
-    {{ isLocked ? "Requires an Eternity to unlock" : formatCost(cost) }}
+    {{ isLocked ? "Requires an 永远 to 解锁" : formatCost(cost) }}
   </button>
   `
 };

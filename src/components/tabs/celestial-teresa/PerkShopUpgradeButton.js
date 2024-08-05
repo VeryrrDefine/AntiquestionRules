@@ -1,4 +1,4 @@
-import CostDisplay from "../../CostDisplay.js";
+﻿import CostDisplay from "../../CostDisplay.js";
 import DescriptionDisplay from "../../DescriptionDisplay.js";
 import EffectDisplay from "../../EffectDisplay.js";
 
@@ -56,7 +56,7 @@ export default {
       <CostDisplay
         v-if="!isCapped"
         :config="upgrade.config"
-        name="Perk Point"
+        name="复兴指画"
       />
     </button>
   </div>

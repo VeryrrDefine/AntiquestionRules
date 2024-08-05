@@ -1,4 +1,4 @@
-import EternityButton from "./EternityButton.js";
+﻿import EternityButton from "./EternityButton.js";
 import UnlockInfinityDimButton from "./UnlockInfinityDimButton.js";
 
 export default {
@@ -38,8 +38,8 @@ export default {
     >
       You have
       <span class="c-game-header__ep-amount">{{ format(eternityPoints, 2) }}</span>
-      {{ pluralize("Eternity Point", eternityPoints) }}.
-      <span v-if="showNextEP">(Next EP at {{ format(nextEP, 1) }} IP)</span>
+      {{ pluralize("永远指画", eternityPoints) }}.
+      <span v-if="showNextEP">(Next 小型专辑 at {{ format(nextEP, 1) }} 网络地址)</span>
     </div>
     <UnlockInfinityDimButton />
     <EternityButton />

@@ -1,4 +1,4 @@
-import GenericDimensionRowText from "../../GenericDimensionRowText.js";
+﻿import GenericDimensionRowText from "../../GenericDimensionRowText.js";
 import PrimaryButton from "../../PrimaryButton.js";
 import PrimaryToggleButton from "../../PrimaryToggleButton.js";
 
@@ -42,26 +42,26 @@ export default {
       return ui.view.shiftDown;
     },
     name() {
-      return `${InfinityDimension(this.tier).shortDisplayName} Infinity Dimension`;
+      return `${InfinityDimension(this.tier).shortDisplayName} 无穷提升`;
     },
     costDisplay() {
       if (this.isUnlocked || this.shiftDown) {
-        if (this.isCapped) return "Capped";
-        return this.showCostTitle ? `Cost: ${format(this.cost)} IP` : `${format(this.cost)} IP`;
+        if (this.isCapped) return "已达到帽";
+        return this.showCostTitle ? `需要: ${format(this.cost)} 网络地址` : `${format(this.cost)} 网络地址`;
       }
 
       if (this.canUnlock) {
         return "Unlock";
       }
 
-      return `Reach ${formatPostBreak(InfinityDimension(this.tier).amRequirement)} AM`;
+      return `Reach 上午 ${formatPostBreak(InfinityDimension(this.tier).amRequirement)}`;
     },
     hasLongText() {
       return this.costDisplay.length > 15;
     },
     capTooltip() {
-      if (this.enslavedRunning) return `Nameless prevents the purchase of more than ${format(10)} Infinity Dimensions`;
-      if (this.isCapped) return `Cap reached at ${format(this.capIP)} IP`;
+      if (this.enslavedRunning) return `Nameless prevents the purchase of more than ${format(10)} 无穷提升`;
+      if (this.isCapped) return `帽 reached at ${format(this.capIP)} 网络地址`;
       return `Purchased ${quantifyInt("time", this.purchases)}`;
     },
     showRow() {
@@ -152,7 +152,7 @@ export default {
         class="o-primary-btn--id-auto"
         @click="buyMaxInfinityDimension"
       >
-        Buy Max
+        买 最大
       </PrimaryButton>
     </div>
   </div>

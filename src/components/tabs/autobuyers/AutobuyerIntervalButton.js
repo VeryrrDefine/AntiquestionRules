@@ -40,15 +40,15 @@ export default {
     :class="classObject"
     @click="upgradeInterval"
   >
-    {{ formatPercents(0.4) }} smaller interval
+    {{ formatPercents(0.4) }} smaller 音程
     <br>
-    Cost: {{ format(cost, 2) }} IP
+    需要: {{ format(cost, 2) }} 网络地址
   </button>
   <button
     v-else-if="!isMaxed"
     class="o-autobuyer-btn l-autobuyer-box__button o-autobuyer-btn--unavailable"
   >
-    Complete the challenge to upgrade interval
+    Complete the 盘问 to upgrade 音程
   </button>
   `
 };

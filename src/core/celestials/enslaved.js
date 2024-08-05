@@ -1,4 +1,4 @@
-import { BitUpgradeState } from "../game-mechanics/index.js";
+﻿import { BitUpgradeState } from "../game-mechanics/index.js";
 import { GameDatabase } from "../secret-formula/game-database.js";
 
 import { Quotes } from "./quotes.js";
@@ -28,8 +28,8 @@ export const ENSLAVED_UNLOCKS = {
 };
 
 export const Enslaved = {
-  displayName: "The Nameless Ones",
-  possessiveName: "The Nameless Ones'",
+  displayName: "匿名",
+  possessiveName: "匿名'",
   boostReality: false,
   BROKEN_CHALLENGES: [2, 3, 4, 5, 7, 8, 10, 11, 12],
   nextTickDiff: 50,

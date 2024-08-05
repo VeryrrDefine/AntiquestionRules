@@ -1,4 +1,4 @@
-import CelestialQuoteHistory from "../../CelestialQuoteHistory.js";
+﻿import CelestialQuoteHistory from "../../CelestialQuoteHistory.js";
 import GlyphSetPreview from "../../GlyphSetPreview.js";
 import PrimaryButton from "../../PrimaryButton.js";
 import { V_REDUCTION_MODE } from "../../../core/secret-formula/index.js";
@@ -110,7 +110,7 @@ export default {
     },
     startRun() {
       if (this.isDoomed) return;
-      Modal.celestials.show({ name: "V's", number: 3 });
+      Modal.celestials.show({ name: "五's", number: 3 });
     },
     has(info) {
       return info.isUnlocked;
@@ -186,34 +186,34 @@ export default {
           class="o-primary-btn--subtab-option"
           @click="toggleFlipped"
         >
-          <span v-if="wantsFlipped">Hide</span>
-          <span v-else>Show</span>
-          Hard V
+          <span v-if="wantsFlipped">海得</span>
+          <span v-else>节目</span>
+          硬的五
         </PrimaryButton>
         <PrimaryButton
           class="o-primary-btn--subtab-option l-cursed-glyph-creation"
           data-v-v-tab
           @click="createCursedGlyph"
         >
-          Create a Cursed Glyph
+          Create a Cursed 字型
         </PrimaryButton>
         <br>
         Cursed Glyphs can be created here or in the Effarig tab.
         <br>
-        Cursed Glyphs count as {{ formatInt(-3) }} Glyphs for the purposes of all requirements related to Glyph count.
+        Cursed 字型 count as {{ formatInt(-3) }} 字型 for the purposes of all requirements related to 字型 count.
         <br>
-        <span v-if="!isDoomed">The Black Hole can now be used to slow down time if they are both permanent.</span>
+        <span v-if="!isDoomed">The 太空黑洞 can now be used to slow down time if they are both permanent.</span>
         <br><br>
-        Each Hard V-Achievement counts as two V-Achievements and will award {{ formatInt(2) }} Space Theorems
+        Each 硬 五-成绩 counts as two 五-成绩 and will award {{ formatInt(2) }} 太空法则
         instead of {{ formatInt(1) }}.
         <br>
-        Goal reduction is significantly more expensive for Hard V-Achievements.
+        Goal reduction is significantly more expensive for 硬 五-成绩.
       </div>
       <div
         v-if="showReduction"
         class="c-v-info-text"
       >
-        You have {{ quantify("Perk Point", pp, 2, 0) }}.
+        You have {{ quantify("复兴指画", pp, 2, 0) }}.
       </div>
       <div class="l-v-unlocks-container">
         <li
@@ -280,8 +280,8 @@ export default {
               data-v-v-tab
             >
               <span v-if="isRunning">You are in </span>
-              <span v-else>Start </span>
-              V's Reality.
+              <span v-else>启动 </span>
+              五's 实际.
             </b>
             <br>
             <div :style="{ 'font-size': hasAlchemy ? '1.2rem' : '' }">
@@ -300,16 +300,16 @@ export default {
         </li>
       </div>
       <div class="c-v-info-text">
-        V-Achievements can only be completed within V's Reality, but are permanent and do not reset upon leaving
-        and re-entering the Reality.
+        五-成绩 can only be completed within 五's 实际, but are permanent and do not reset upon leaving
+        and re-entering the 实际.
       </div>
       <div class="c-v-info-text">
-        You have {{ formatInt(totalUnlocks) }} V-Achievements done.
+        You have {{ formatInt(totalUnlocks) }} 五-成绩 done.
         <span v-if="!isDoomed">
-          You gain {{ formatInt(1) }} Space Theorem for each completion,
-          allowing you to purchase Time Studies which are normally locked.
+          You gain {{ formatInt(1) }} 太空法则 for each completion,
+          allowing you to purchase 光阴学习 which are normally locked.
           <br>
-          Space Theorems can also be used as a Currency in the Automator.
+          太空法则 can also be used as a Currency in the Automator.
         </span>
       </div>
       <br>
@@ -328,7 +328,7 @@ export default {
           >
             <div :class="{ 'o-pelle-disabled': isDoomed }">
               <p>{{ milestone.description }}</p>
-              <p>Reward: {{ milestone.rewardText }}</p>
+              <p>奖励♂: {{ milestone.rewardText }}</p>
               <p v-if="milestone.formattedEffect">
                 Currently: <b>{{ milestone.formattedEffect }}</b>
               </p>

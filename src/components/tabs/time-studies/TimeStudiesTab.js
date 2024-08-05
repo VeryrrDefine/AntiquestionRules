@@ -1,4 +1,4 @@
-import { STUDY_TREE_LAYOUT_TYPE, TimeStudyTreeLayout } from "./time-study-tree-layout.js";
+﻿import { STUDY_TREE_LAYOUT_TYPE, TimeStudyTreeLayout } from "./time-study-tree-layout.js";
 
 import DilationTimeStudy from "./DilationTimeStudy.js";
 import ECTimeStudy from "./ECTimeStudy.js";
@@ -143,7 +143,7 @@ export default {
         :class="respecClassObject"
         @click="respec = !respec"
       >
-        Respec Time Studies on next Eternity
+        Respec 光阴学习 on next 永远
       </PrimaryButton>
       <PrimaryButton
         class="o-primary-btn--subtab-option"

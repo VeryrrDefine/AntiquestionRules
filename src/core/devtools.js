@@ -23,12 +23,12 @@ dev.giveAllAchievements = function() {
 dev.doubleEverything = function() {
   Object.keys(player).forEach(key => {
     if (typeof player[key] === "number") player[key] *= 2;
-    if (typeof player[key] === "object" && player[key].constructor !== Object) player[key] = player[key].times(2);
-    if (typeof player[key] === "object" && !isFinite(player[key])) {
+    if (typeof player[key] === "object" && player[key].constructor === Decimal) player[key] = player[key].times(2);
+    else {
       Object.keys(player[key]).forEach(key2 => {
         if (typeof player[key][key2] === "number") player[key][key2] *= 2;
-        if (typeof player[key][key2] === "object" && player[key][key2].constructor !== Object)
-          player[key][key2] = player[key][key2].times(2);
+        if (typeof player[key][key2] === "object" && player[key][key2].constructor === Decimal)
+          player[key][key2] = player[key][key2].times(2); // may be a array, so don't 
       });
     }
   });
@@ -37,8 +37,8 @@ dev.doubleEverything = function() {
 dev.tripleEverything = function() {
   Object.keys(player).forEach(key => {
     if (typeof player[key] === "number") player[key] *= 3;
-    if (typeof player[key] === "object" && player[key].constructor !== Object) player[key] = player[key].times(3);
-    if (typeof player[key] === "object" && !isFinite(player[key])) {
+    if (typeof player[key] === "object" && player[key].constructor === Decimal) player[key] = player[key].times(3);
+    else {
       Object.keys(player[key]).forEach(key3 => {
         if (typeof player[key][key3] === "number") player[key][key3] *= 3;
         if (typeof player[key][key3] === "object" && player[key][key3].constructor !== Object)

@@ -56,21 +56,21 @@ export default {
     modeProps(mode) {
       switch (mode) {
         case AUTO_CRUNCH_MODE.AMOUNT: return {
-          title: "Big Crunch at X IP",
+          title: "大嘎吱嘎吱 at X 网络地址",
           input: {
             property: "amount",
             type: "decimal"
           },
         };
         case AUTO_CRUNCH_MODE.TIME: return {
-          title: "Seconds between Crunches",
+          title: "第二 between 嘎吱嘎吱",
           input: {
             property: "time",
             type: "float"
           },
         };
         case AUTO_CRUNCH_MODE.X_HIGHEST: return {
-          title: "X times highest IP",
+          title: "X 光阴 highest 网络地址",
           input: {
             property: "xHighest",
             type: "decimal"

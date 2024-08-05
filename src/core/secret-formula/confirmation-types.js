@@ -82,6 +82,6 @@ export const confirmationTypes = [
   }, {
     name: "Respec Shop Purchases",
     option: "respecIAP",
-    isUnlocked: () => Cloud.isAvailable
+    isUnlocked: () => false
   }
 ];

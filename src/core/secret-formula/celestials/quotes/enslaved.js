@@ -1,4 +1,4 @@
-export const enslavedQuotes = {
+﻿export const enslavedQuotes = {
   initial: {
     id: 0,
     lines: [
@@ -21,7 +21,7 @@ export const enslavedQuotes = {
     id: 2,
     lines: [
       "So little space... but no... prison... is perfect.",
-      "They squeezed... this Reality... too tightly. Cracks appeared.",
+      "They squeezed... this 实际... too tightly. Cracks appeared.",
       "Search... everywhere. We will help... where we can.",
     ]
   },
@@ -30,7 +30,7 @@ export const enslavedQuotes = {
     lines: [
       "... you need... to look harder...",
       "We think... we can help...",
-      { text: "You have unlocked help from The Nameless Ones.", showCelestialName: false }
+      { text: "You have unlocked help from 匿名.", showCelestialName: false }
     ]
   },
   ec6C10: {

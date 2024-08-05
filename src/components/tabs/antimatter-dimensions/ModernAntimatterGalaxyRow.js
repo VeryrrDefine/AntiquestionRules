@@ -1,4 +1,4 @@
-export default {
+﻿export default {
   name: "ModernAntimatterGalaxyRow",
   data() {
     return {
@@ -36,8 +36,8 @@ export default {
       if (!Achievement(111).isUnlocked) reset.push("Dimensions");
       if (!Achievement(143).isUnlocked) reset.push("Dimension Boosts");
       return reset.length === 0
-        ? `Increase the power of Tickspeed upgrades`
-        : `Reset your ${makeEnumeration(reset)} to increase the power of Tickspeed upgrades`;
+        ? `Increase the power of 嘀嗒速度 upgrades`
+        : `Reset your ${makeEnumeration(reset)} to increase the power of 嘀嗒速度 upgrades`;
     },
     sumText() {
       const parts = [Math.max(this.galaxies.normal, 0)];
@@ -51,9 +51,9 @@ export default {
     },
     typeName() {
       switch (this.type) {
-        case GALAXY_TYPE.NORMAL: return "Antimatter Galaxies";
-        case GALAXY_TYPE.DISTANT: return "Distant Antimatter Galaxies";
-        case GALAXY_TYPE.REMOTE: return "Remote Antimatter Galaxies";
+        case GALAXY_TYPE.NORMAL: return "反问题银河系";
+        case GALAXY_TYPE.DISTANT: return "远离 反问题银河系";
+        case GALAXY_TYPE.REMOTE: return "远程 反问题银河系";
       }
       return undefined;
     },
@@ -63,13 +63,13 @@ export default {
     costScalingText() {
       switch (this.type) {
         case GALAXY_TYPE.DISTANT:
-          return `Each Galaxy is more expensive past ${quantifyInt("Galaxy", this.distantStart)}`;
+          return `Each 银河系 is more expensive past ${quantifyInt("Galaxy", this.distantStart)}`;
         case GALAXY_TYPE.REMOTE: {
           const scalings = [
             { type: "distant", function: "quadratic", amount: this.distantStart },
             { type: "remote", function: "exponential", amount: this.remoteStart }
           ];
-          return `Increased Galaxy cost scaling: ${scalings.sort((a, b) => a.amount - b.amount)
+          return `Increased 银河系 cost scaling: ${scalings.sort((a, b) => a.amount - b.amount)
             .map(scaling => `${scaling.function} scaling past ${this.formatGalaxies(scaling.amount)} (${scaling.type})`)
             .join(", ").capitalize()}`;
         }
@@ -119,7 +119,7 @@ export default {
   template: `
   <div class="reset-container galaxy">
     <h4>{{ typeName }} ({{ sumText }})</h4>
-    <span>Requires: {{ formatInt(requirement.amount) }} {{ dimName }} Antimatter D</span>
+    <span>指令: {{ formatInt(requirement.amount) }} {{ dimName }} 反问题 尺寸</span>
     <span v-if="hasIncreasedScaling">{{ costScalingText }}</span>
     <button
       :class="classObject"

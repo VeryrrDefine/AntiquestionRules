@@ -1,4 +1,4 @@
-export default {
+﻿export default {
   name: "TickspeedRow",
   data() {
     return {
@@ -32,7 +32,7 @@ export default {
       return `${formatX(tickmult.reciprocal(), 2, 3)} faster / upgrade.`;
     },
     tickspeedDisplay() {
-      return `Tickspeed: ${format(this.tickspeed, 2, 3)} / sec`;
+      return `嘀嗒速度: ${format(this.tickspeed, 2, 3)} / 正割`;
     },
     continuumString() {
       return formatFloat(this.continuumValue, 2);
@@ -94,7 +94,7 @@ export default {
           Tickspeed Unpurchasable (EC 9)
         </span>
         <span v-else>
-          Tickspeed Cost: {{ format(cost) }}
+          嘀嗒速度 Cost: {{ format(cost) }}
         </span>
         <div
           v-if="hasTutorial"

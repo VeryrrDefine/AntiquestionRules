@@ -1,4 +1,4 @@
-export default {
+﻿export default {
   name: "SaveTimer",
   data() {
     return {
@@ -39,8 +39,8 @@ export default {
     @click="save"
     data-v-save-timer
   >
-    <b v-if="saveDisabled">There is nothing left to save.</b>
-    <span v-else>Time since last save: {{ timeString }}</span>
+    <b v-if="saveDisabled">特蕾莎 没有 左 二 存档.</b>
+    <span v-else>时间 开始 上次 存档: {{ timeString }}</span>
   </div>
   `
 };

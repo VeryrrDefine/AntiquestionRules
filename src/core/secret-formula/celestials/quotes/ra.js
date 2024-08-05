@@ -1,11 +1,11 @@
-export const raQuotes = {
+﻿export const raQuotes = {
   unlock: {
     id: 0,
     lines: [
       "A... visitor?",
       "I am here! I am the one you are looking for... I think...",
       "What even was I again?",
-      "Oh right, the Celestial of Memories.",
+      "Oh right, the 天体 of Memories.",
     ]
   },
   realityEnter: {
@@ -20,7 +20,7 @@ export const raQuotes = {
     id: 2,
     requirement: () => Ra.pets.teresa.level >= 2,
     lines: [
-      "Te... re... sa...",
+      "有... 一... 个...",
       "I think I remember.",
     ]
   },
@@ -28,24 +28,24 @@ export const raQuotes = {
     id: 3,
     requirement: () => Ra.pets.teresa.level >= 15,
     lines: [
-      "Teresa dealt with machines, I believe.",
-      "I remember visiting Teresa’s shop a few times.",
+      "有一个 dealt with machines, I believe.",
+      "I remember visiting 有一个’s shop a few times.",
       "Wait, someone else had a shop too, right?",
     ]
   },
   effarigStart: {
     id: 4,
     requirement: () => Ra.pets.effarig.level >= 2,
-    lines: [
-      "Eff... a... rig",
-      "I remember Effarig being friendly.",
+    lines: [// 来忑拉
+      "效果... 显... 著",
+      "I remember 效果显著 being friendly.",
     ]
   },
   effarigLate: {
     id: 5,
     requirement: () => Ra.pets.effarig.level >= 15,
     lines: [
-      "Effarig was very particular?",
+      "效果显著 was very particular?",
       "And I also remember a frightening Reality...",
       "It was about... suffering?",
     ]
@@ -79,7 +79,7 @@ export const raQuotes = {
     id: 9,
     requirement: () => Ra.pets.v.level >= 15,
     lines: [
-      "I think I met V once...",
+      "I think I met 五 once...",
       "I can remember the achievements.",
     ]
   },
@@ -97,7 +97,7 @@ export const raQuotes = {
     id: 11,
     requirement: () => Ra.totalPetLevel >= 50,
     lines: [
-      "Realities are my homes, yet I cannot make my own Reality.",
+      "Realities are my homes, yet I cannot make my own 实际.",
       "I can only copy the ones of my friends.",
       "But... why am I hearing voices?",
       "Are they asking for help?",
@@ -119,7 +119,7 @@ export const raQuotes = {
     lines: [
       "Finally, I remember everything.",
       "This darkness that banished me.",
-      "Lai'tela...",
+      "来忑拉...",
       "They were right to banish me.",
       "My powers...",
       "They steal, they corrupt.",

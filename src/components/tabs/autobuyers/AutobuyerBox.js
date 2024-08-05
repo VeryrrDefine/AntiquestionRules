@@ -98,7 +98,7 @@ export default {
             : "Will trigger ASAP";
         case AUTO_ETERNITY_MODE.X_HIGHEST:
         default:
-          return `Will trigger at ${format(this.nextValue, 2)} ${this.autobuyer.name === "Infinity" ? "IP" : "EP"}`;
+          return `Will trigger at ${format(this.nextValue, 2)} ${this.autobuyer.name === "Infinity" ? "网络地址" : "小型专辑"}`;
       }
     }
   },
@@ -184,7 +184,7 @@ export default {
   >
     {{ name }}
     <br>
-    Requirement: {{ format(antimatterCost) }} Total Antimatter {{ showEternity }}
+    需要: {{ format(antimatterCost) }} Total 反问题 {{ showEternity }}
   </div>
   `
 };

@@ -1,4 +1,4 @@
-import ArmageddonButton from "../../tabs/celestial-pelle/ArmageddonButton.js";
+﻿import ArmageddonButton from "../../tabs/celestial-pelle/ArmageddonButton.js";
 import RealityCurrencyHeader from "../../RealityCurrencyHeader.js";
 
 import HeaderTickspeedInfo from "../HeaderTickspeedInfo.js";
@@ -43,7 +43,7 @@ export default {
     v-if="shouldDisplay"
     class="c-prestige-button-container"
   >
-    <span>You have <span class="c-game-header__antimatter">{{ format(antimatter, 2, 1) }}</span> antimatter.</span>
+    <span>你变成了 <span class="c-game-header__antimatter">{{ format(antimatter, 2, 1) }}</span> 反问题.</span>
     <div
       v-if="hasRealityButton"
       class="c-reality-container"
@@ -57,7 +57,7 @@ export default {
       <RealityButton v-else />
     </div>
     <div v-else>
-      You are getting {{ format(antimatterPerSec, 2) }} antimatter per second.
+      You are getting {{ format(antimatterPerSec, 2) }} 反问题 per second.
       <br>
       <HeaderTickspeedInfo />
     </div>

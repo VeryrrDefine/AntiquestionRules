@@ -1,4 +1,4 @@
-import { DC } from "./constants.js";
+﻿import { DC } from "./constants.js";
 
 class DimBoostRequirement {
   constructor(tier, amount) {
@@ -130,15 +130,15 @@ export class DimBoost {
 
     let newUnlock = "";
     if (!allNDUnlocked && boosts < DimBoost.maxDimensionsUnlockable - 4) {
-      newUnlock = `unlock the ${boosts + 5}th Dimension`;
+      newUnlock = `unlock the ${boosts + 5}钍 尺寸`;
     } else if (boosts === 4 && !NormalChallenge(10).isRunning && !EternityChallenge(3).isRunning) {
-      newUnlock = "unlock Sacrifice";
+      newUnlock = "unlock 牺牲";
     }
 
     const formattedMultText = `give a ${formatX(DimBoost.power, 2, 1)} multiplier `;
-    let dimensionRange = `to the 1st Dimension`;
-    if (boosts > 0) dimensionRange = `to Dimensions 1-${Math.min(boosts + 1, 8)}`;
-    if (boosts >= DimBoost.maxDimensionsUnlockable - 1) dimensionRange = `to all Dimensions`;
+    let dimensionRange = `to the 1短吨 尺寸`;
+    if (boosts > 0) dimensionRange = `to 尺寸 1-${Math.min(boosts + 1, 8)}`;
+    if (boosts >= DimBoost.maxDimensionsUnlockable - 1) dimensionRange = `to all 尺寸`;
 
     let boostEffects;
     if (NormalChallenge(8).isRunning) boostEffects = newUnlock;
@@ -149,7 +149,7 @@ export class DimBoost {
     const areDimensionsKept = (Perk.antimatterNoReset.isBought || Achievement(111).canBeApplied) &&
       (!Pelle.isDoomed || PelleUpgrade.dimBoostResetsNothing.isBought);
     if (areDimensionsKept) return boostEffects[0].toUpperCase() + boostEffects.substring(1);
-    return `Reset your Dimensions to ${boostEffects}`;
+    return `Reset your 尺寸 to ${boostEffects}`;
   }
 
   static get purchasedBoosts() {

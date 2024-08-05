@@ -1,4 +1,4 @@
-import BigCrunchButton from "./BigCrunchButton.js";
+﻿import BigCrunchButton from "./BigCrunchButton.js";
 
 export default {
   name: "HeaderInfinityContainer",
@@ -39,7 +39,7 @@ export default {
     >
       You have
       <span class="c-game-header__ip-amount">{{ format(infinityPoints, 2) }}</span>
-      {{ pluralize("Infinity Point", infinityPoints) }}.
+      {{ pluralize("无穷远点", infinityPoints) }}.
       <span
         v-if="isTesseractUnlocked"
         v-html="tesseractText"

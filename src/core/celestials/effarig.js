@@ -1,4 +1,4 @@
-import { BitUpgradeState } from "../game-mechanics/index.js";
+﻿import { BitUpgradeState } from "../game-mechanics/index.js";
 import { GameDatabase } from "../secret-formula/game-database.js";
 
 import { DC } from "../constants.js";
@@ -13,8 +13,8 @@ export const EFFARIG_STAGES = {
 };
 
 export const Effarig = {
-  displayName: "Effarig",
-  possessiveName: "Effarig's",
+  displayName: "效果显著",
+  possessiveName: "效果显著's",
   initializeRun() {
     clearCelestialRuns();
     player.celestials.effarig.run = true;

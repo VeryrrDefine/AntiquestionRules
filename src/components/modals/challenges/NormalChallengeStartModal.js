@@ -1,4 +1,4 @@
-import ModalWrapperChoice from "../ModalWrapperChoice.js";
+﻿import ModalWrapperChoice from "../ModalWrapperChoice.js";
 
 export default {
   name: "NormalChallengeStartModal",
@@ -19,17 +19,17 @@ export default {
       return this.challenge.isCompleted;
     },
     message() {
-      return `You will Big Crunch (if possible) and start a new Infinity within the Challenge with all the
-        Challenge-specific restrictions and modifiers active.
-        To complete the Challenge${this.challengeIsCompleted ? "" : " and gain its reward"},
-        you must reach Infinity again.
-        You do not start with any Dimension Boosts or Galaxies, regardless of upgrades.`;
+      return `You will 大嘎吱嘎吱 (if possible) and start a new 无穷 within the 盘问 with all the
+        盘问-specific 管制 and 修改 主动.
+        To 通过 the 盘问${this.challengeIsCompleted ? "" : " 得到奖励♂"},
+        you must reach 无穷 again.
+        You do not start with any 方面促进 和 银河系, regardless of 提升.`;
     },
     entranceLabel() {
-      return `You are about to enter Challenge ${this.id}`;
+      return `You are about to enter 盘问 ${this.id}`;
     },
     reward() {
-      return `The reward for completing this challenge is: ${this.challenge._config.reward}`;
+      return `The 奖励♂ for completing this 盘问 is: ${this.challenge._config.reward}`;
     },
     condition() {
       let conditionOfChallenge = this.challenge._config.description;

@@ -1,4 +1,4 @@
-export default {
+﻿export default {
   name: "HowToPlay",
   data() {
     return {
@@ -40,11 +40,10 @@ export default {
     >
       ?
       <div
-        v-if="hasTutorial"
         class="h2p-tooltip"
         data-v-how-to-play
       >
-        Click for info
+        可立刻佛音佛
       </div>
     </div>
     <div

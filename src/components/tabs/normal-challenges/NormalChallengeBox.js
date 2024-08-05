@@ -1,4 +1,4 @@
-import ChallengeBox from "../../ChallengeBox.js";
+﻿import ChallengeBox from "../../ChallengeBox.js";
 import DescriptionDisplay from "../../DescriptionDisplay.js";
 
 export default {
@@ -30,14 +30,14 @@ export default {
         return this.challenge.config;
       }
       return {
-        description: `Infinity ${formatInt(this.challenge.config.lockedAt)} times to unlock.`
+        description: `无穷 ${formatInt(this.challenge.config.lockedAt)} 次 解锁.`
       };
     },
     name() {
       return `C${this.challenge.id}`;
     },
     overrideLabel() {
-      return this.isBroken ? "Broken" : "";
+      return this.isBroken ? "堕了。。。" : "";
     },
   },
   methods: {
@@ -66,7 +66,7 @@ export default {
       <DescriptionDisplay :config="descriptionDisplayConfig" />
     </template>
     <template #bottom>
-      <span :class="{ 'o-pelle-disabled': isDisabled }">Reward: {{ challenge.config.reward }}</span>
+      <span :class="{ 'o-pelle-disabled': isDisabled }">奖励♂: {{ challenge.config.reward }}</span>
     </template>
   </ChallengeBox>
   `

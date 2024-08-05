@@ -1,4 +1,4 @@
-export default {
+﻿export default {
   name: "EternityPointsHeader",
   data() {
     return {
@@ -14,7 +14,7 @@ export default {
   <div class="c-eternity-tab__header">
     You have
     <span class="c-eternity-tab__eternity-points">{{ format(eternityPoints, 2) }}</span>
-    {{ pluralize("Eternity Point", eternityPoints) }}.
+    永远指画.
   </div>
   `
 };

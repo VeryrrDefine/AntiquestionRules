@@ -1,4 +1,4 @@
-import HintText from "./HintText.js";
+﻿import HintText from "./HintText.js";
 
 export default {
   name: "ChallengeBox",
@@ -64,7 +64,7 @@ export default {
       const lockedText = this.lockedAt === undefined
         ? ""
         : ` (${formatInt(this.infinities)}/${formatInt(this.lockedAt)})`;
-      return `Locked${lockedText}`;
+      return `锁定${lockedText}`;
     }
   },
   methods: {

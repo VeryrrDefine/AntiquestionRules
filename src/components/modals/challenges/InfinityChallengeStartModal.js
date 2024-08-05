@@ -1,4 +1,4 @@
-import ModalWrapperChoice from "../ModalWrapperChoice.js";
+﻿import ModalWrapperChoice from "../ModalWrapperChoice.js";
 
 export default {
   name: "InfinityChallengeStartModal",
@@ -19,29 +19,29 @@ export default {
       return this.challenge.isCompleted;
     },
     message() {
-      return `You will Big Crunch (if possible) and start a new Infinity within the Challenge with all the
-        Challenge-specific restrictions and modifiers active.
-        To complete the Challenge${this.challengeIsCompleted ? "" : " and gain its reward"},
-        you must reach the Challenge goal of
-        ${format(InfinityChallenge(this.id).goal)} Antimatter.
-        You do not start with any Dimension Boosts or Galaxies, regardless of upgrades.`;
+      return `You will 大嘎吱嘎吱 (if possible) and start a new 无穷 盘问 the 盘问 with all the
+        盘问-specific restrictions and modifiers active.
+        To complete the 盘问${this.challengeIsCompleted ? "" : " and gain its reward"},
+        you must reach the 盘问 goal of
+        ${format(InfinityChallenge(this.id).goal)} 反问题.
+        You do not start with any 方面促进 or 银河系, regardless of 提升.`;
     },
     entranceLabel() {
-      return `You are about to enter Infinity Challenge ${this.id}`;
+      return `You are about to enter 无穷 盘问 ${this.id}`;
     },
     reward() {
       let rewardDescription = this.challenge._config.reward.description;
       if (typeof rewardDescription === "function") {
         rewardDescription = rewardDescription();
       }
-      return `The reward for completing this challenge is: ${rewardDescription}`;
+      return `The reward for completing this 盘问 is: ${rewardDescription}`;
     },
     condition() {
       let conditionOfChallenge = this.challenge._config.description;
       if (typeof conditionOfChallenge === "function") {
         conditionOfChallenge = conditionOfChallenge();
       }
-      return `Inside this Infinity Challenge, ${conditionOfChallenge}`;
+      return `Inside this 无穷 盘问, ${conditionOfChallenge}`;
     }
   },
   created() {

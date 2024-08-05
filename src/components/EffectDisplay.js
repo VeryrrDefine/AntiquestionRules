@@ -1,4 +1,4 @@
-import { isDecimal, isFunction, isNumber } from "../utility/index.js";
+﻿import { isDecimal, isFunction, isNumber } from "../utility/index.js";
 
 /* eslint-disable no-empty-function */
 export default {
@@ -42,7 +42,7 @@ export default {
       if (this.config.noLabel) {
         return "";
       }
-      return `${this.reachedCap && !this.ignoreCapped ? "Capped" : this.label}: `;
+      return `${this.reachedCap && !this.ignoreCapped ? "已达到帽" : this.label}: `;
     },
     effectDisplay() {
       return this.formatEffect(this.reachedCap ? this.cap : this.effectValue);

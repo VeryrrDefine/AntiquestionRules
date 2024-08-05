@@ -1,4 +1,4 @@
-import { DC } from "../../../constants.js";
+﻿import { DC } from "../../../constants.js";
 
 const thisInfinityMult = thisInfinity => {
   // All "this inf time" or "best inf time" mults are * 10
@@ -38,7 +38,7 @@ export const normalTimeStudies = [
     // All requirements of an empty array will always evaluate to true, so this study is always purchasable
     requirement: [],
     reqType: TS_REQUIREMENT_TYPE.ALL,
-    description: "Tickspeed affects 1st Time Dimension with reduced effect",
+    description: "滴答速度 affects 1st 光阴 尺寸 with reduced effect",
     effect: () => {
       const tickspeed = Tickspeed.current.dividedBy(1000);
       const firstPart = tickspeed.pow(0.005).times(0.95);
@@ -86,7 +86,7 @@ export const normalTimeStudies = [
     cost: 2,
     requirement: [22],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
-    description: `You gain more Infinities based on Dimension Boosts`,
+    description: `You gain more Infinities based on 方面促进`,
     effect: () => Math.max(DimBoost.totalBoosts, 1),
     formatEffect: value => formatX(value, 2)
   },
@@ -144,7 +144,7 @@ export const normalTimeStudies = [
     cost: 4,
     requirement: [61, () => Perk.studyECRequirement.isBought || !EternityChallenge(12).isUnlocked],
     reqType: TS_REQUIREMENT_TYPE.DIMENSION_PATH,
-    description: "Dimensional Sacrifice affects all other Antimatter Dimensions with reduced effect",
+    description: "尺寸牺牲 affects all other Antimatter Dimensions with reduced effect",
     effect: () => Sacrifice.totalBoost.pow(0.25).clampMin(1),
     cap: DC.E210000,
     formatEffect: value => formatX(value, 2, 1)
@@ -156,7 +156,7 @@ export const normalTimeStudies = [
       () => Perk.studyECRequirement.isBought ||
         (!EternityChallenge(11).isUnlocked && !EternityChallenge(12).isUnlocked)],
     reqType: TS_REQUIREMENT_TYPE.DIMENSION_PATH,
-    description: "Dimensional Sacrifice affects 4th Infinity Dimension with greatly reduced effect",
+    description: "尺寸牺牲 affects 4th Infinity Dimension with greatly reduced effect",
     effect: () => Sacrifice.totalBoost.pow(0.04).clampMin(1),
     cap: DC.E30000,
     formatEffect: value => formatX(value, 2, 1)
@@ -166,7 +166,7 @@ export const normalTimeStudies = [
     cost: 5,
     requirement: [61, () => Perk.studyECRequirement.isBought || !EternityChallenge(11).isUnlocked],
     reqType: TS_REQUIREMENT_TYPE.DIMENSION_PATH,
-    description: "Dimensional Sacrifice affects 3rd Time Dimension with greatly reduced effect",
+    description: "尺寸牺牲 affects 3rd Time Dimension with greatly reduced effect",
     effect: () => Sacrifice.totalBoost.pow(0.005).clampMin(1),
     cap: DC.E1300,
     formatEffect: value => formatX(value, 2, 1)
@@ -184,7 +184,7 @@ export const normalTimeStudies = [
     cost: 6,
     requirement: [72],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
-    description: "Dimension Boosts affect Infinity Dimensions",
+    description: "方面促进 affect 无穷 尺寸",
     effect: () => DC.D1_0000109.pow(Math.pow(DimBoost.totalBoosts, 2)),
     cap: DC.E1E7,
     formatEffect: value => formatX(value, 2, 1)
@@ -394,7 +394,7 @@ export const normalTimeStudies = [
     cost: 8,
     requirement: [141, 142, 143],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
-    description: () => `${formatX(1e4)} multiplier on all Time Dimensions`,
+    description: () => `${formatX(1e4)} multiplier on all 光阴 尺寸`,
     effect: 1e4
   },
   {
@@ -410,7 +410,7 @@ export const normalTimeStudies = [
     cost: 7,
     requirement: [151],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
-    description: () => `${formatX(1e11)} multiplier on all Infinity Dimensions`,
+    description: () => `${formatX(1e11)} multiplier on all 无穷 尺寸`,
     effect: 1e11
   },
   {
@@ -500,7 +500,7 @@ export const normalTimeStudies = [
     cost: 120,
     requirement: [193],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
-    description: "Dimensional Sacrifice boosts the 8th Antimatter Dimension even more",
+    description: "尺寸牺牲 boosts the 8th Antimatter Dimension even more",
     effect: () => {
       const totalBoost = Sacrifice.totalBoost;
       const firstPart = totalBoost.pow(7.6).clampMaxExponent(44000);
@@ -517,7 +517,7 @@ export const normalTimeStudies = [
     requirement: [211],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     requiresST: [222],
-    description: "Time Dimension multiplier based on Dimension Boosts",
+    description: "Time Dimension multiplier based on 方面促进",
     effect: () => DC.D1_0025.pow(DimBoost.totalBoosts),
     formatEffect: value => formatX(value, 2, 1)
   },
@@ -584,7 +584,7 @@ export const normalTimeStudies = [
     requirement: [214],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     requiresST: [228],
-    description: "Dimensional Sacrifice affects 4th Time Dimension with reduced effect",
+    description: "尺寸牺牲 affects 4th Time Dimension with reduced effect",
     effect: () => Math.max(Math.pow(Sacrifice.totalBoost.pLog10(), 10), 1),
     formatEffect: value => formatX(value, 2, 2)
   },
@@ -595,7 +595,7 @@ export const normalTimeStudies = [
     requirement: [214],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     requiresST: [227],
-    description: () => `Dimensional Sacrifice formula scales better
+    description: () => `尺寸牺牲 formula scales better
       ${Sacrifice.getSacrificeDescription({ "TimeStudy228": false })} ➜
       ${Sacrifice.getSacrificeDescription({ "TimeStudy228": true })}`,
     effect: 0.2
@@ -607,7 +607,7 @@ export const normalTimeStudies = [
     requirement: [221, 222],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     requiresST: [232],
-    description: "Dimension Boosts are stronger based on their amount",
+    description: "方面促进 are stronger based on their amount",
     effect: () => Decimal.pow(DimBoost.totalBoosts, 0.3).clampMin(1),
     formatEffect: value => formatX(value, 2, 2)
   },
@@ -640,7 +640,7 @@ export const normalTimeStudies = [
     requirement: [227, 228],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     requiresST: [233],
-    description: "Dimensional Sacrifice applies to 1st Antimatter Dimension",
+    description: "尺寸牺牲 applies to 1st Antimatter Dimension",
     effect: () => Sacrifice.totalBoost,
   },
   // Note: These last 4 entries are the triad studies
@@ -686,7 +686,7 @@ export const normalTimeStudies = [
     requirement: [() => Ra.unlocks.unlockHardV.effectOrDefault(0) >= 4, 227, 228, 234],
     reqType: TS_REQUIREMENT_TYPE.ALL,
     requiresST: [227, 228, 234],
-    description: "Dimensional Sacrifice multiplier is squared",
+    description: "尺寸牺牲 multiplier is squared",
     effect: 2,
     unlocked: () => Ra.unlocks.unlockHardV.effectOrDefault(0) >= 4
   }

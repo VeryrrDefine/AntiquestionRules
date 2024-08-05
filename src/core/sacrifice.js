@@ -1,4 +1,4 @@
-import { DC } from "./constants.js";
+﻿import { DC } from "./constants.js";
 
 export class Sacrifice {
   // This is tied to the "buying an 8th dimension" achievement in order to hide it from new players before they reach
@@ -14,27 +14,27 @@ export class Sacrifice {
   }
 
   static get disabledCondition() {
-    if (NormalChallenge(10).isRunning) return "8th Dimensions are disabled";
-    if (EternityChallenge(3).isRunning) return "Eternity Challenge 3";
-    if (DimBoost.purchasedBoosts < 5) return `Requires ${formatInt(5)} Dimension Boosts`;
-    if (AntimatterDimension(8).totalAmount.eq(0)) return "No 8th Antimatter Dimensions";
+    if (NormalChallenge(10).isRunning) return "8钍 尺寸 are disabled";
+    if (EternityChallenge(3).isRunning) return "永远 盘问 3";
+    if (DimBoost.purchasedBoosts < 5) return `指令 ${formatInt(5)} 方面促进`;
+    if (AntimatterDimension(8).totalAmount.eq(0)) return "No 8钍 尺寸";
     if (this.nextBoost.lte(1)) return `${formatX(1)} multiplier`;
-    if (Player.isInAntimatterChallenge) return "Challenge goal reached";
-    return "Need to Crunch";
+    if (Player.isInAntimatterChallenge) return "盘问 goal reached";
+    return "Need to 嘎吱嘎吱";
   }
 
   static getSacrificeDescription(changes) {
     const f = (name, condition) => (name in changes ? changes[name] : condition);
     let factor = 2;
     let places = 1;
-    let base = `(log₁₀(AD1)/${formatInt(10)})`;
+    let base = `(log₁₀(反问题尺寸1)/${formatInt(10)})`;
     if (f("Challenge8isRunning", NormalChallenge(8).isRunning)) {
       factor = 1;
       base = "x";
     } else if (f("InfinityChallenge2isCompleted", InfinityChallenge(2).isCompleted)) {
       factor = 1 / 120;
       places = 3;
-      base = "AD1";
+      base = "反问题尺寸1";
     }
 
     const exponent = (1 +

@@ -1,34 +1,34 @@
-import { DC } from "../../constants.js";
+﻿import { DC } from "../../constants.js";
 
 export const normalAchievements = [
   {
     id: 11,
     name: "You gotta start somewhere",
-    description: "Buy a 1st Antimatter Dimension.",
+    description: "Buy a 1短吨 反问题 尺寸.",
     checkEvent: GAME_EVENT.ACHIEVEMENT_EVENT_OTHER,
   },
   {
     id: 12,
-    name: "100 antimatter is a lot",
-    description: "Buy a 2nd Antimatter Dimension.",
+    name: "100 反问题 is a lot",
+    description: "Buy a 2钕 反问题 尺寸.",
     checkEvent: GAME_EVENT.ACHIEVEMENT_EVENT_OTHER,
   },
   {
     id: 13,
     name: "Half life 3 CONFIRMED",
-    description: "Buy a 3rd Antimatter Dimension.",
+    description: "Buy a 3农村邮递 反问题 尺寸.",
     checkEvent: GAME_EVENT.ACHIEVEMENT_EVENT_OTHER,
   },
   {
     id: 14,
-    name: "L4D: Left 4 Dimensions",
-    description: "Buy a 4th Antimatter Dimension.",
+    name: "L4尺: Left 4 尺寸",
+    description: "Buy a 4钍 反问题 尺寸.",
     checkEvent: GAME_EVENT.ACHIEVEMENT_EVENT_OTHER,
   },
   {
     id: 15,
-    name: "5 Dimension Antimatter Punch",
-    description: "Buy a 5th Antimatter Dimension.",
+    name: "5 尺寸 反问题 Punch",
+    description: "Buy a 5钍 反问题 尺寸.",
     checkEvent: GAME_EVENT.ACHIEVEMENT_EVENT_OTHER,
   },
   {
@@ -36,31 +36,31 @@ export const normalAchievements = [
     name: "We couldn't afford 9",
     get description() {
       return Enslaved.isRunning
-        ? "Buy a 6th Antimatter Dimension (they never amount to anything)"
-        : "Buy a 6th Antimatter Dimension.";
+        ? "Buy a 6钍 反问题 尺寸 (they never amount to anything)"
+        : "Buy a 6钍 反问题 尺寸.";
     },
     checkEvent: GAME_EVENT.ACHIEVEMENT_EVENT_OTHER,
   },
   {
     id: 17,
     name: "Not a luck related achievement",
-    description: "Buy a 7th Antimatter Dimension.",
+    description: "Buy a 7钍 反问题 尺寸.",
     checkEvent: GAME_EVENT.ACHIEVEMENT_EVENT_OTHER,
   },
   {
     id: 18,
-    name: "90 degrees to infinity",
+    name: "90 degrees to 无穷",
     get description() {
       return Enslaved.isRunning
-        ? "Buy an 8th Antimatter Dimension (don't get used to it)"
-        : "Buy an 8th Antimatter Dimension.";
+        ? "Buy an 8钍 反问题 尺寸 (don't get used to it)"
+        : "Buy an 8钍 反问题 尺寸.";
     },
     checkEvent: GAME_EVENT.ACHIEVEMENT_EVENT_OTHER,
   },
   {
     id: 21,
-    name: "To infinity!",
-    description: "Go Infinite.",
+    name: "To 无穷!",
+    description: "Go 无穷.",
     checkRequirement: () => true,
     checkEvent: GAME_EVENT.BIG_CRUNCH_BEFORE,
     get reward() { return `Start with ${formatInt(100)} antimatter.`; },
@@ -75,7 +75,7 @@ export const normalAchievements = [
   },
   {
     id: 23,
-    name: "The 9th Dimension is a lie",
+    name: "The 9th 尺寸 is a lie",
     get description() { return `Have exactly ${formatInt(99)} 8th Antimatter Dimensions.`; },
     checkRequirement: () => AntimatterDimension(8).amount.eq(99),
     get reward() { return `8th Antimatter Dimensions are ${formatPercents(0.1)} stronger.`; },
@@ -83,7 +83,7 @@ export const normalAchievements = [
   },
   {
     id: 24,
-    name: "Antimatter Apocalypse",
+    name: "反问题 Apocalypse",
     get description() { return `Get over ${format(DC.E80)} antimatter.`; },
     checkRequirement: () => Currency.antimatter.exponent >= 80,
     checkEvent: GAME_EVENT.GAME_TICK_AFTER
@@ -104,7 +104,7 @@ export const normalAchievements = [
   },
   {
     id: 27,
-    name: "Double Galaxy",
+    name: "Double 银行系",
     get description() { return `Buy ${formatInt(2)} Antimatter Galaxies.`; },
     checkRequirement: () => player.galaxies >= 2,
     checkEvent: GAME_EVENT.GALAXY_RESET_AFTER
@@ -113,7 +113,7 @@ export const normalAchievements = [
     id: 28,
     name: "There's no point in doing that...",
     get description() {
-      return `Buy a single 1st Antimatter Dimension when you have over ${format(DC.E150)} of them.`;
+      return `Buy a single 1st 反问题 尺寸 when you have over ${format(DC.E150)} of them.`;
     },
     checkRequirement: () => AntimatterDimension(1).amount.exponent >= 150,
     checkEvent: GAME_EVENT.ACHIEVEMENT_EVENT_OTHER,
@@ -144,7 +144,7 @@ export const normalAchievements = [
   },
   {
     id: 33,
-    name: "That's a lot of infinites",
+    name: "That's a lot of 无穷",
     get description() { return `Reach Infinity ${formatInt(10)} times.`; },
     checkRequirement: () => Currency.infinities.gte(10),
     checkEvent: GAME_EVENT.BIG_CRUNCH_AFTER
@@ -228,7 +228,7 @@ export const normalAchievements = [
     id: 43,
     name: "How the antitables have turned..",
     description:
-      "Get the 8th Antimatter Dimension multiplier to be highest, 7th Antimatter Dimension multiplier " +
+      "Get the 8th 反问题 尺寸 multiplier to be highest, 7th 反问题 尺寸 multiplier " +
       " second highest, etc.",
     checkRequirement: () => {
       const multipliers = Array.range(1, 8).map(tier => AntimatterDimension(tier).multiplier);
@@ -247,7 +247,7 @@ export const normalAchievements = [
     id: 44,
     name: "Over in 30 Seconds",
     get description() {
-      return `Have antimatter per second exceed your current antimatter
+      return `Have 反问题 per second exceed your current 反问题
       for ${formatInt(30)} consecutive seconds.`;
     },
     checkRequirement: () => AchievementTimers.marathon1
@@ -265,7 +265,7 @@ export const normalAchievements = [
   },
   {
     id: 46,
-    name: "Multidimensional",
+    name: "Multi尺寸al",
     get description() { return `Reach ${format(DC.E12)} of all Antimatter Dimensions except the 8th.`; },
     checkRequirement: () => AntimatterDimension(7).amount.exponent >= 12,
     checkEvent: GAME_EVENT.GAME_TICK_AFTER
@@ -279,8 +279,8 @@ export const normalAchievements = [
   },
   {
     id: 48,
-    name: "Antichallenged",
-    get description() { return `Complete all ${formatInt(12)} Normal Challenges.`; },
+    name: "反盘问",
+    get description() { return `Complete all ${formatInt(12)} Normal 盘问.`; },
     checkRequirement: () => NormalChallenges.all.countWhere(c => !c.isCompleted) === 0,
     checkEvent: [GAME_EVENT.BIG_CRUNCH_AFTER, GAME_EVENT.REALITY_RESET_AFTER, GAME_EVENT.REALITY_UPGRADE_TEN_BOUGHT],
     get reward() { return `All Dimensions are ${formatPercents(0.1)} stronger.`; },

@@ -1,4 +1,4 @@
-import { DC } from "../../constants.js";
+﻿import { DC } from "../../constants.js";
 
 const specialInfinityGlyphDisabledEffectText = () => (PelleRifts.chaos.milestones[1].canBeApplied
   ? "The Pelle-Specific effect from Infinity Glyphs is also disabled."
@@ -7,11 +7,11 @@ const specialInfinityGlyphDisabledEffectText = () => (PelleRifts.chaos.milestone
 export const eternityChallenges = [
   {
     id: 1,
-    description: "Time Dimensions are disabled.",
+    description: "光阴维度 are disabled.",
     goal: DC.E1800,
     goalIncrease: DC.E200,
     reward: {
-      description: "Time Dimension multiplier based on time spent this Eternity",
+      description: "光阴维度 multiplier based on time spent this 永远",
       effect: completions =>
         Decimal.pow(Math.max(player.records.thisEternity.time / 10, 0.9), 0.3 + (completions * 0.05)),
       formatEffect: value => formatX(value, 2, 1)
@@ -21,12 +21,12 @@ export const eternityChallenges = [
   },
   {
     id: 2,
-    description: "Infinity Dimensions are disabled.",
+    description: "无穷提升 are disabled.",
     goal: DC.E975,
     pelleGoal: DC.E1750,
     goalIncrease: DC.E175,
     reward: {
-      description: "1st Infinity Dimension multiplier based on Infinity Power",
+      description: "1短吨 无穷提升 multiplier based on Infinity Power",
       effect: completions => Currency.infinityPower.value.pow(1.5 / (700 - completions * 100)).clampMin(1),
       cap: DC.E100,
       formatEffect: value => formatX(value, 2, 1)
@@ -34,30 +34,30 @@ export const eternityChallenges = [
   },
   {
     id: 3,
-    description: "Antimatter Dimensions 5-8 don't produce anything. Dimensional Sacrifice is disabled.",
+    description: "反问题 尺寸 5-8 don't produce anything. 尺寸 牺牲 is disabled.",
     goal: DC.E600,
     pelleGoal: DC.E925,
     goalIncrease: DC.E75,
     reward: {
-      description: () => `Increase the multiplier for buying ${formatInt(10)} Antimatter Dimensions`,
+      description: () => `Increase the multiplier for buying ${formatInt(10)} 反问题 尺寸`,
       effect: completions => completions * 0.72,
       formatEffect: value => `+${format(value, 2, 2)}`
     }
   },
   {
     id: 4,
-    description: `all Infinity multipliers and generators are disabled. The goal must be reached within a certain
-      number of Infinities or else you will fail the Challenge.`,
+    description: `all 无穷 multipliers and generators are disabled. The goal must be reached within a certain
+      number of 无穷 or else you will fail the 盘问.`,
     goal: DC.E2750,
     goalIncrease: DC.E550,
     restriction: completions => Math.max(16 - 4 * completions, 0),
     checkRestriction: restriction => Currency.infinities.lte(restriction),
     formatRestriction: restriction => (restriction === 0
-      ? "without any Infinities"
+      ? "without any 无穷"
       : `in ${quantifyInt("Infinity", restriction)} or less`),
-    failedRestriction: "(Too many Infinities for more)",
+    failedRestriction: "(Too many 无穷 for more)",
     reward: {
-      description: "Infinity Dimension multiplier based on unspent IP",
+      description: "无穷提升 multiplier based on unspent 网络地址",
       effect: completions => Currency.infinityPoints.value.pow(0.003 + completions * 0.002),
       cap: DC.E200,
       formatEffect: value => formatX(value, 2, 1)
@@ -65,13 +65,13 @@ export const eternityChallenges = [
   },
   {
     id: 5,
-    description: () => `Antimatter Galaxy cost increase scaling starts immediately (normally at ${formatInt(100)}
-      Galaxies). Dimension Boost costs scaling is massively increased.`,
+    description: () => `反问题银河系 cost increase scaling starts immediately (normally at ${formatInt(100)}
+      Galaxies). 方面促进 costs scaling is massively increased.`,
     goal: DC.E750,
     pelleGoal: DC.E1400,
     goalIncrease: DC.E400,
     reward: {
-      description: "Distant Galaxy cost scaling starts later",
+      description: "Distant 银河系 cost scaling starts later",
       effect: completions => completions * 5,
       formatEffect: value => `${formatInt(value)} AG later`
     }
@@ -81,8 +81,8 @@ export const eternityChallenges = [
     // The asterisk, if present, will get replaced with strings generated from the scramble text
     description: () => {
       if (Enslaved.isRunning) return "you *. The cost of upgrading your max Replicanti Galaxies is massively reduced.";
-      return "you cannot gain Antimatter Galaxies normally. The cost of upgrading your max Replicanti" +
-              " Galaxies is massively reduced.";
+      return "you cannot gain 反问题银河系 normally. The cost of upgrading your max 复制人" +
+              " 银河系 is massively reduced.";
     },
     goal: DC.E850,
     pelleGoal: DC.E1500,

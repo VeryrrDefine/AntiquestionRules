@@ -1,4 +1,4 @@
-import { BitUpgradeState, RebuyableMechanicState } from "../game-mechanics/index.js";
+﻿import { BitUpgradeState, RebuyableMechanicState } from "../game-mechanics/index.js";
 import { GameDatabase } from "../secret-formula/game-database.js";
 
 import { Quotes } from "./quotes.js";
@@ -7,8 +7,8 @@ export const Teresa = {
   timePoured: 0,
   lastUnlock: "effarig",
   pouredAmountCap: 1e24,
-  displayName: "Teresa",
-  possessiveName: "Teresa's",
+  displayName: "有一个",
+  possessiveName: "有一个's",
   get isUnlocked() {
     return Achievement(147).isUnlocked;
   },

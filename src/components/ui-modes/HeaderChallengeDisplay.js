@@ -1,4 +1,4 @@
-import FailableEcText from "./FailableEcText.js";
+﻿import FailableEcText from "./FailableEcText.js";
 import PrimaryButton from "../PrimaryButton.js";
 
 export default {
@@ -23,36 +23,36 @@ export default {
       // won't trigger display update if we, say, switch from one challenge to another
       function celestialReality(celestial, name, tab) {
         return {
-          name: () => `${name} Reality`,
+          name: () => `${name} 实际`,
           isActive: token => token,
           activityToken: () => celestial.isRunning,
           tabName: () => tab,
         };
       }
       return [
-        celestialReality(Teresa, "Teresa's", "teresa"),
-        celestialReality(Effarig, "Effarig's", "effarig"),
-        celestialReality(Enslaved, "The Nameless Ones'", "enslaved"),
-        celestialReality(V, "V's", "v"),
+        celestialReality(Teresa, "有一个's", "teresa"),
+        celestialReality(Effarig, "效果显著's", "effarig"),
+        celestialReality(Enslaved, "匿名's", "enslaved"),
+        celestialReality(V, "无's", "v"),
         celestialReality(Ra, "Ra's", "ra"),
-        celestialReality(Laitela, "Lai'tela's", "laitela"),
+        celestialReality(Laitela, "来忑拉", "laitela"),
         {
-          name: () => "Time Dilation",
+          name: () => "时间扩张",
           isActive: token => token,
           activityToken: () => player.dilation.active
         },
         {
-          name: token => `Eternity Challenge ${token}`,
+          name: token => `永远 盘问 ${token}`,
           isActive: token => token > 0,
           activityToken: () => player.challenge.eternity.current
         },
         {
-          name: token => `Infinity Challenge ${token}`,
+          name: token => `无穷 盘问 ${token}`,
           isActive: token => token > 0,
           activityToken: () => player.challenge.infinity.current
         },
         {
-          name: token => `${NormalChallenge(token).config.name} Challenge`,
+          name: token => `${NormalChallenge(token).config.name} 盘问`,
           isActive: token => token > 0,
           activityToken: () => player.challenge.normal.current
         },
@@ -71,7 +71,7 @@ export default {
           if (Enslaved.isRunning && currEC === 1) {
             completionText = `(${formatInt(nextCompletion)}/???)`;
           } else if (nextCompletion === 6) {
-            completionText = `(already completed)`;
+            completionText = `(通关了 completed)`;
           } else {
             completionText = `(${formatInt(nextCompletion)}/${formatInt(5)})`;
           }
@@ -90,9 +90,9 @@ export default {
     },
     challengeDisplay() {
       if (this.inPelle && this.activeChallengeNames.length > 0) {
-        return `${this.activeChallengeNames.join(" + ")} in a Doomed Reality. Good luck.`;
+        return `${this.activeChallengeNames.join(" + ")} in a 被预订的实际. 祝你好运.`;
       }
-      if (this.inPelle) return "a Doomed Reality. Good luck.";
+      if (this.inPelle) return "a 被预订的实际. 祝你好运.";
       if (this.activeChallengeNames.length === 0) {
         return "the Antimatter Universe (no active challenges)";
       }
@@ -129,7 +129,7 @@ export default {
         // Regex replacement is used to remove the "(X/Y)" which appears after ECs. The ternary statement is there
         // because this path gets called for NCs, ICs, and ECs
         const toExit = this.activeChallengeNames[this.activeChallengeNames.length - 1].replace(/\W+\(.*\)/u, "");
-        names = { chall: toExit, normal: isEC ? "Eternity" : "Infinity" };
+        names = { chall: toExit, normal: isEC ? "永远" : "无穷" };
         clickFn = () => {
           const oldChall = Player.anyChallenge;
           Player.anyChallenge.exit(false);
@@ -176,9 +176,9 @@ export default {
       else Tab.celestials[celestial].show(true);
     },
     exitDisplay() {
-      if (Player.isInAnyChallenge) return player.options.retryChallenge ? "Retry Challenge" : "Exit Challenge";
-      if (player.dilation.active) return "Exit Dilation";
-      if (this.resetCelestial) return "Restart Reality";
+      if (Player.isInAnyChallenge) return player.options.retryChallenge ? "Retry 盘问" : "Exit 盘问";
+      if (player.dilation.active) return "Exit 扩张";
+      if (this.resetCelestial) return "Restart 实际";
       return "Exit Reality";
     },
     textClassObject() {

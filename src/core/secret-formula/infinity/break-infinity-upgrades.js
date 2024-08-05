@@ -1,4 +1,4 @@
-import { DC } from "../../constants.js";
+﻿import { DC } from "../../constants.js";
 
 function rebuyable(config) {
   const effectFunction = config.effect || (x => x);
@@ -30,14 +30,14 @@ export const breakInfinityUpgrades = {
   totalAMMult: {
     id: "totalMult",
     cost: 1e4,
-    description: "Antimatter Dimensions gain a multiplier based on total antimatter produced",
+    description: "反问题 尺寸 gain a multiplier based on total antimatter produced",
     effect: () => Math.pow(player.records.totalAntimatter.exponent + 1, 0.5),
     formatEffect: value => formatX(value, 2, 2)
   },
   currentAMMult: {
     id: "currentMult",
     cost: 5e4,
-    description: "Antimatter Dimensions gain a multiplier based on current antimatter",
+    description: "反问题 尺寸 gain a multiplier based on current antimatter",
     effect: () => Math.pow(Currency.antimatter.exponent + 1, 0.5),
     formatEffect: value => formatX(value, 2, 2)
   },
@@ -50,21 +50,21 @@ export const breakInfinityUpgrades = {
   infinitiedMult: {
     id: "infinitiedMult",
     cost: 1e5,
-    description: "Antimatter Dimensions gain a multiplier based on Infinities",
+    description: "反问题 尺寸 gain a multiplier based on Infinities",
     effect: () => 1 + Currency.infinitiesTotal.value.pLog10() * 10,
     formatEffect: value => formatX(value, 2, 2)
   },
   achievementMult: {
     id: "achievementMult",
     cost: 1e6,
-    description: "Additional multiplier to Antimatter Dimensions based on Achievements completed",
+    description: "Additional multiplier to 反问题 尺寸 based on Achievements completed",
     effect: () => Math.max(Math.pow((Achievements.effectiveCount - 30), 3) / 40, 1),
     formatEffect: value => formatX(value, 2, 2)
   },
   slowestChallengeMult: {
     id: "challengeMult",
     cost: 1e7,
-    description: "Antimatter Dimensions gain a multiplier based on slowest challenge run",
+    description: "反问题 尺寸 gain a multiplier based on slowest challenge run",
     effect: () => Decimal.clampMin(50 / Time.worstChallenge.totalMinutes, 1),
     formatEffect: value => formatX(value, 2, 2),
     hasCap: true,

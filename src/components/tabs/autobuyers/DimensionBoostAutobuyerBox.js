@@ -66,7 +66,7 @@ export default {
         data-v-dimension-boost-autobuyer-box
       >
         <br>
-        Activates every X seconds:
+        主动 每 X 第二:
       </div>
       <AutobuyerInput
         :autobuyer="autobuyer"
@@ -88,7 +88,7 @@ export default {
           class="o-clickable"
           data-v-dimension-boost-autobuyer-box
         >
-        Limit Dimension Boosts to:
+        限制 方面促进 to:
       </label>
       <AutobuyerInput
         :autobuyer="autobuyer"
@@ -108,12 +108,12 @@ export default {
           data-v-dimension-boost-autobuyer-box
         >
         <span v-if="isBuyMaxUnlocked">
-          Only Dimboost to unlock new<br>
-          Dimensions until X Galaxies:
+          Only 方面促进 to unlock new<br>
+          尺寸 until X 银河系:
         </span>
         <span v-else>
-          Galaxies required to always<br>
-          Dimboost, ignoring the limit:
+          银河系 required to always<br>
+          方面促进, ignoring the limit:
         </span>
       </label>
       <AutobuyerInput

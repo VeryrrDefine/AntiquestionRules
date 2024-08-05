@@ -1,4 +1,4 @@
-import { DC } from "../../../core/constants.js";
+﻿import { DC } from "../../../core/constants.js";
 
 import CelestialQuoteHistory from "../../CelestialQuoteHistory.js";
 import CustomizeableTooltip from "../../CustomizeableTooltip.js";
@@ -79,8 +79,8 @@ export default {
     },
     lastMachinesString() {
       return this.lastMachines.lt(DC.E10000)
-        ? `${quantify("Reality Machine", this.lastMachines, 2)}`
-        : `${quantify("Imaginary Machine", this.lastMachines.dividedBy(DC.E10000), 2)}`;
+        ? `${quantify("实际车", this.lastMachines, 2)}`
+        : `${quantify("假想车", this.lastMachines.dividedBy(DC.E10000), 2)}`;
     },
     unlockInfoTooltipArrowStyle() {
       return {
@@ -120,7 +120,7 @@ export default {
     },
     startRun() {
       if (this.isDoomed) return;
-      Modal.celestials.show({ name: "Teresa's", number: 0 });
+      Modal.celestials.show({ name: "有一个's", number: 0 });
     },
     unlockDescriptionHeight(unlockInfo) {
       const maxPrice = TeresaUnlocks[Teresa.lastUnlock].price;
@@ -141,7 +141,7 @@ export default {
   <div class="l-teresa-celestial-tab">
     <CelestialQuoteHistory celestial="teresa" />
     <div>
-      You have {{ quantify("Reality Machine", rm, 2, 2) }}.
+      You have {{ quantify("实际车", rm, 2, 2) }}.
     </div>
     <div class="l-mechanics-container">
       <div
@@ -150,7 +150,7 @@ export default {
       >
         <div class="c-teresa-unlock c-teresa-run-button">
           <span :class="{ 'o-pelle-disabled': isDoomed }">
-            Start Teresa's Reality.
+            Start 有一个's 实际.
           </span>
           <div
             :class="runButtonClassObject"
@@ -161,13 +161,13 @@ export default {
           {{ runDescription }}
           <br><br>
           <div>
-            This Reality can be repeated for a stronger reward based on the antimatter gained within it.
+            This 实际 can be repeated for a stronger reward based on the 反问题 gained within it.
             <br><br>
             <span v-if="showRunReward">
-              Your record antimatter in Teresa's Reality is {{ format(bestAM, 2) }},
+              Your record 反问题 in 有一个's 实际 is {{ format(bestAM, 2) }},
               achieved with {{ lastMachinesString }}.
               <br><br>
-              Glyph Set used:
+              字型 Set used:
               <GlyphSetPreview
                 text="Teresa's Best Glyph Set"
                 :text-hidden="true"
@@ -176,7 +176,7 @@ export default {
               />
             </span>
             <span v-else>
-              You have not completed Teresa's Reality yet.
+              You have not completed 有一个's 实际 yet.
             </span>
           </div>
         </div>
@@ -184,14 +184,14 @@ export default {
           v-if="showRunReward"
           class="c-teresa-unlock"
         >
-          Teresa Reality reward: Glyph Sacrifice power {{ formatX(runReward, 2, 2) }}
+          有一个 实际 reward: 字型 牺牲 power {{ formatX(runReward, 2, 2) }}
         </div>
         <div
           v-if="hasEPGen"
           class="c-teresa-unlock"
         >
           <span :class="{ 'o-pelle-disabled': isDoomed }">
-            Every second, you gain {{ formatPercents(0.01) }} of your peaked Eternity Points per minute this Reality.
+            Every 第二, you gain {{ formatPercents(0.01) }} of your peaked 永远指画 per minute this Reality.
           </span>
         </div>
       </div>
@@ -259,7 +259,7 @@ export default {
           :key="upgrade.id"
           :upgrade="upgrade"
         />
-        You can now modify the appearance of your Glyphs to look like Music Glyphs.
+        You can now modify the appearance of your 字型 to look like Music Glyphs.
       </div>
       <div
         v-else

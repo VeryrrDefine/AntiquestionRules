@@ -1,4 +1,4 @@
-export default {
+﻿export default {
   name: "EternityButton",
   data() {
     return {
@@ -182,48 +182,48 @@ export default {
     <template v-if="type === -1">
       Reach {{ format(eternityGoal, 2, 2) }}
       <br>
-      Infinity Points
+      无穷远点
     </template>
 
     <!-- First time -->
     <template v-else-if="type === 0">
-      Other times await... I need to become Eternal
+      Other times await... I need to become 永远
     </template>
 
     <!-- Normal -->
     <template v-else-if="type === 1">
-      Eternity for
+      永远 for
       <span :style="amountStyle">{{ format(gainedEP, 2) }}</span>
-      <span v-if="showEPRate"> EP</span>
-      <span v-else> Eternity {{ pluralize("Point", gainedEP) }}</span>
+      <span v-if="showEPRate"> 小型专辑</span>
+      <span v-else>  {{ pluralize("小型专辑", gainedEP) }}</span>
       <br>
       <template v-if="showEPRate">
-        Current: {{ format(currentEPRate, 2, 2) }} EP/min
+        Current: {{ format(currentEPRate, 2, 2) }} 小型专辑/最小
         <br>
-        Peak: {{ format(peakEPRate, 2, 2) }} EP/min
+        Peak: {{ format(peakEPRate, 2, 2) }} 小型专辑/最小
         <br>
-        at {{ format(peakEPRateVal, 2, 2) }} EP
+        at {{ format(peakEPRateVal, 2, 2) }} 小型专辑
       </template>
     </template>
 
     <!-- Challenge -->
     <template v-else-if="type === 2 || (type === 6 && !canEternity)">
-      Other challenges await... I need to become Eternal
+      Other 盘问 await... I need to become 永远
     </template>
 
     <!-- Dilation -->
     <template v-else-if="type === 3">
-      Eternity for <span :style="tachyonAmountStyle">{{ format(gainedTachyons, 2, 1) }}</span>
+      永远 for <span :style="tachyonAmountStyle">{{ format(gainedTachyons, 2, 1) }}</span>
       {{ pluralize("Tachyon Particle", gainedTachyons) }}
     </template>
 
     <!-- New content available -->
     <template v-else-if="type === 4 || type === 5">
       <template v-if="type === 4">
-        Eternity for <span :style="amountStyle">{{ format(gainedEP, 2, 2) }}</span> EP
+        永远 for <span :style="amountStyle">{{ format(gainedEP, 2, 2) }}</span> 小型专辑
       </template>
       <template v-else>
-        Eternity for <span :style="tachyonAmountStyle">{{ format(gainedTachyons, 2, 1) }}</span> TP
+        永远 for <span :style="tachyonAmountStyle">{{ format(gainedTachyons, 2, 1) }}</span> 传送指令
       </template>
       <br>
       You should explore a bit and look at new content before clicking me!
@@ -231,21 +231,21 @@ export default {
 
     <!-- Challenge with multiple completions -->
     <template v-else-if="type === 6">
-      Other challenges await...
+      Other 盘问 await...
       <template v-if="fullyCompleted">
         <br>
-        (This challenge is already fully completed)
+        (This 盘问 is already fully completed)
       </template>
       <template v-else>
         <br>
-        {{ quantifyInt("completion", gainedCompletions) }} on Eternity
+        {{ quantifyInt("completion", gainedCompletions) }} on 永远
         <template v-if="failedRestriction">
           <br>
           {{ failedRestriction }}
         </template>
         <template v-else-if="hasMoreCompletions">
           <br>
-          Next goal at {{ format(nextGoalAt) }} IP
+          Next goal at {{ format(nextGoalAt) }} 网络地址
         </template>
       </template>
     </template>

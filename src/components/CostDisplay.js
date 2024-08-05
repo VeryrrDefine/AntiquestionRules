@@ -19,7 +19,7 @@ export default {
     },
     label: {
       type: String,
-      default: "Cost:",
+      default: "需要:",
       required: false
     }
   },

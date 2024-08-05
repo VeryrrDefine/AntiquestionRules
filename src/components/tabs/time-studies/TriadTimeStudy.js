@@ -1,4 +1,4 @@
-import DescriptionDisplay from "../../DescriptionDisplay.js";
+﻿import DescriptionDisplay from "../../DescriptionDisplay.js";
 import EffectDisplay from "../../EffectDisplay.js";
 import HintText from "../../HintText.js";
 import TimeStudyButton from "./TimeStudyButton.js";
@@ -38,7 +38,7 @@ export default {
       type="studies"
       class="l-hint-text--time-study"
     >
-      {{ id }} Triad
+      {{ id }} 三人组
     </HintText>
     <DescriptionDisplay :config="study.config" />
     <EffectDisplay

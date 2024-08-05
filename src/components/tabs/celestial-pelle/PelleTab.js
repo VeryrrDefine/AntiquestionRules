@@ -1,4 +1,4 @@
-import CelestialQuoteHistory from "../../CelestialQuoteHistory.js";
+﻿import CelestialQuoteHistory from "../../CelestialQuoteHistory.js";
 import GalaxyGeneratorPanel from "./PelleGalaxyGeneratorPanel.js";
 import PelleBarPanel from "./PelleBarPanel.js";
 import PelleUpgradePanel from "./PelleUpgradePanel.js";
@@ -98,7 +98,7 @@ export default {
       @click="enterDoomModal"
       data-v-pelle-tab
     >
-      Doom<br>Your<br>Reality
+      预订<br>你的<br>实际
       <div
         class="pelle-icon-container"
         data-v-pelle-tab
@@ -114,13 +114,13 @@ export default {
       class="pelle-unlock-requirements"
       data-v-pelle-tab
     >
-      You must have {{ formatInt(totalRows) }} rows of Achievements
-      and all of your Glyph Alchemy Resources capped to unlock Pelle, Celestial of Antimatter.
+      You must have {{ formatInt(totalRows) }} 行 成绩
+      and all of your 字形 Alchemy Resources capped to unlock 皮肤, 天体 of 反问题.
       <br>
       <br>
-      {{ formatInt(completedRows) }} / {{ formatInt(totalRows) }} Achievement rows completed
+      {{ formatInt(completedRows) }} / {{ formatInt(totalRows) }} 成绩 行 completed
       <br>
-      {{ formatInt(cappedResources) }} / {{ formatInt(totalAlchemyResources) }} capped Alchemy Resources
+      {{ formatInt(cappedResources) }} / {{ formatInt(totalAlchemyResources) }} 已达到帽的 Alchemy Resources
     </div>
   </div>
   `

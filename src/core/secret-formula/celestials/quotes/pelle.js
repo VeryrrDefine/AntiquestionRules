@@ -1,4 +1,4 @@
-// These entries describe the special flash-between-celestial effect on some quotes, with the numbers being
+﻿// These entries describe the special flash-between-celestial effect on some quotes, with the numbers being
 // durations of each celestial in seconds
 const flashCelestial = [
   ["teresa", 0.8],
@@ -47,7 +47,7 @@ export const pelleQuotes = {
   initial: {
     id: 0,
     lines: [
-      "Hi.",
+      "亻尓女子",
       "You are here.",
       "You are trapped here.",
       { text: "$1.", 1: forever },
@@ -430,7 +430,7 @@ export const pelleQuotes = {
         text: "I hope you are happy.",
         background: flashCelestial,
       }, {
-        text: "You have doomed us all.",
+        text: "You have 预订 us all.",
         background: flashCelestial,
       },
     ],

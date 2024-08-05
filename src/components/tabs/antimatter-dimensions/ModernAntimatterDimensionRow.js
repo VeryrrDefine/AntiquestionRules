@@ -1,4 +1,4 @@
-import GenericDimensionRowText from "../../GenericDimensionRowText.js";
+﻿import GenericDimensionRowText from "../../GenericDimensionRowText.js";
 
 export default {
   name: "ModernAntimatterDimensionRow",
@@ -36,7 +36,7 @@ export default {
   computed: {
     isDoomed: () => Pelle.isDoomed,
     name() {
-      return `${AntimatterDimension(this.tier).shortDisplayName} Antimatter Dimension`;
+      return `${AntimatterDimension(this.tier).shortDisplayName} 反问题 尺寸`;
     },
     costDisplay() {
       return this.buyUntil10 ? format(this.until10Cost) : format(this.singleCost);
@@ -64,8 +64,11 @@ export default {
     buttonValue() {
       if (this.isCapped) return "";
       if (this.isContinuumActive) return this.continuumString;
-      const prefix = this.showCostTitle(this.buyUntil10 ? this.until10Cost : this.singleCost) ? "Cost: " : "";
-      const suffix = this.isCostsAD ? this.costUnit : "AM";
+      let prefix = this.showCostTitle(this.buyUntil10 ? this.until10Cost : this.singleCost) ? "需要: " : "";
+      if (!this.isCostsAD){
+          prefix+=" 上午 "
+      }
+      const suffix = this.isCostsAD ? this.costUnit : "";
       return `${prefix}${this.costDisplay} ${suffix}`;
     },
     hasLongText() {

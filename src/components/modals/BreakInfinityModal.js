@@ -1,4 +1,4 @@
-import ModalWrapperChoice from "./ModalWrapperChoice.js";
+﻿import ModalWrapperChoice from "./ModalWrapperChoice.js";
 
 export default {
   name: "BreakInfinityModal",
@@ -8,12 +8,12 @@ export default {
   computed: {
     message() {
       const infinity = formatPostBreak(Number.MAX_VALUE, 2);
-      return `Breaking Infinity will allow you to gain antimatter past ${infinity}${PlayerProgress.eternityUnlocked()
+      return `堕无穷 will allow you to gain 反问题 past ${infinity}${PlayerProgress.eternityUnlocked()
         ? "." : `, and allow you to read numbers past ${infinity}.`}
-        Dimensions and Tickspeed Upgrades will scale in cost faster after ${infinity} antimatter.
-        You will gain additional Infinity Points on Big Crunch based on antimatter produced over ${infinity}.\
-        ${EternityMilestone.keepAutobuyers.isReached ? "" : `\nIt will also unlock Break Infinity Upgrades and max\
-        all Normal Challenge Autobuyers.`}`.split("\n");
+        尺寸 and 嘀嗒速度 Upgrades will scale in cost faster after ${infinity} 反问题.
+        You will gain additional 无穷远点 on 大嘎吱嘎吱 based on 反问题 produced over ${infinity}.\
+        ${EternityMilestone.keepAutobuyers.isReached ? "" : `\nIt will also unlock 堕无穷 提升 and max\
+        all Normal 盘问 Autobuyers.`}`.split("\n");
     },
   },
   methods: {
@@ -27,7 +27,7 @@ export default {
     @confirm="handleYesClick"
   >
     <template #header>
-      You are Breaking Infinity
+      You are 堕无穷
     </template>
     <div class="c-modal-message__text">
       <span

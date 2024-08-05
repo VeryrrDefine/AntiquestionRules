@@ -1,4 +1,4 @@
-export default {
+﻿export default {
   name: "ModernDimensionBoostRow",
   data() {
     return {
@@ -63,8 +63,8 @@ export default {
   },
   template: `
   <div class="reset-container dimboost">
-    <h4>Dimension Boost ({{ boostCountText }})</h4>
-    <span>Requires: {{ formatInt(requirement.amount) }} {{ dimName }} Antimatter D</span>
+    <h4>方面促进 ({{ boostCountText }})</h4>
+    <span>指令: {{ formatInt(requirement.amount) }} {{ dimName }} 反问题 尺寸</span>
     <button
       :class="classObject"
       @click.exact="dimensionBoost(true)"

@@ -1,4 +1,4 @@
-import wordShift from "../../../core/word-shift.js";
+﻿import wordShift from "../../../core/word-shift.js";
 
 import DescriptionDisplay from "../../DescriptionDisplay.js";
 import EffectDisplay from "../../EffectDisplay.js";
@@ -34,7 +34,7 @@ export default {
     },
     goalDisplay() {
       const config = this.config;
-      let goal = `Goal: ${this.goalAtCompletions(this.completions)} IP`;
+      let goal = `目标: ${this.goalAtCompletions(this.completions)} 网络地址`;
       if (config.restriction) {
         goal += ` ${config.formatRestriction(config.restriction(this.completions))}`;
       }
@@ -104,15 +104,15 @@ export default {
     <template #bottom>
       <div :style="{ visiblity: completions < 5 ? 'visible' : 'hidden' }">
         <div>
-          Completed {{ quantifyInt("time", completions) }}
+          通关 {{ quantifyInt("time", completions) }}
         </div>
         {{ goalDisplay }}
       </div>
       <span v-if="showGoalSpan">
-        Goal Span: {{ firstGoal }} IP - {{ lastGoal }} IP
+        奖励♂ Span: {{ firstGoal }} 网络地址 - {{ lastGoal }} 网络地址
       </span>
       <span>
-        Reward:
+        奖励♂:
         <DescriptionDisplay
           :config="config.reward"
           :length="55"

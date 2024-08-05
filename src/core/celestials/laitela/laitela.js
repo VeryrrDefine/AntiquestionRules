@@ -1,11 +1,11 @@
-import { DC } from "../../constants.js";
+﻿import { DC } from "../../constants.js";
 import { Quotes } from "../quotes.js";
 
 import { DarkMatterDimensions } from "./dark-matter-dimension.js";
 
 export const Laitela = {
-  displayName: "Lai'tela",
-  possessiveName: "Lai'tela's",
+  displayName: "来忑拉",
+  possessiveName: "来忑拉's",
   get celestial() {
     return player.celestials.laitela;
   },

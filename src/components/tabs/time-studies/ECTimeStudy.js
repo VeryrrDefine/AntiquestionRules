@@ -1,4 +1,4 @@
-import HintText from "../../HintText.js";
+﻿import HintText from "../../HintText.js";
 import TimeStudyButton from "./TimeStudyButton.js";
 
 export default {
@@ -92,7 +92,7 @@ export default {
         {{ config.secondary.resource }}
       </span>
     </template>
-    <span v-if="isUnlocked && !isRunning"><br>Double click to start</span>
+    <span v-if="isUnlocked && !isRunning"><br>双枪给你启动</span>
     <span v-else-if="isRunning"><br>Currently Running</span>
   </TimeStudyButton>
   `

@@ -153,8 +153,8 @@ export const VUnlocks = mapGameDataToObject(
 );
 
 export const V = {
-  displayName: "V",
-  possessiveName: "V's",
+  displayName: "五",
+  possessiveName: "五's",
   spaceTheorems: 0,
   checkForUnlocks() {
     for (const unl of VUnlocks.all) {
@@ -178,7 +178,7 @@ export const V = {
   },
   unlockCelestial() {
     player.celestials.v.unlockBits |= (1 << VUnlocks.vAchievementUnlock.id);
-    GameUI.notify.success("You have unlocked V, The Celestial Of Achievements!", 10000);
+    GameUI.notify.success("You have unlocked 五, The Celestial Of Achievements!", 10000);
     V.quotes.unlock.show();
   },
   initializeRun() {

@@ -1,4 +1,4 @@
-import CostDisplay from "./CostDisplay.js";
+﻿import CostDisplay from "./CostDisplay.js";
 import DescriptionDisplay from "./DescriptionDisplay.js";
 import EffectDisplay from "./EffectDisplay.js";
 
@@ -94,7 +94,7 @@ export default {
         player.challenge.normal.bestTimes.sum() < Number.MAX_VALUE;
       const worstChallengeTime = GameCache.worstChallengeTime.value;
       const worstChallengeIndex = 2 + player.challenge.normal.bestTimes.indexOf(worstChallengeTime);
-      this.worstChallengeString = `(Challenge ${worstChallengeIndex}: ${timeDisplayShort(worstChallengeTime)})`;
+      this.worstChallengeString = `(盘问 ${worstChallengeIndex}: ${timeDisplayShort(worstChallengeTime)})`;
     }
   },
   template: `
@@ -126,7 +126,7 @@ export default {
       v-if="!isBought"
       br
       :config="config"
-      name="Infinity Point"
+      name="无穷远点"
     />
     <slot />
   </button>

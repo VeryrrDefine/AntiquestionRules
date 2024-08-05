@@ -1,4 +1,4 @@
-import PrimaryToggleButton from "../../../PrimaryToggleButton.js";
+﻿import PrimaryToggleButton from "../../../PrimaryToggleButton.js";
 import TimeStudySaveLoadButton from "./TimeStudySaveLoadButton.js";
 import TimeTheoremBuyButton from "./TimeTheoremBuyButton.js";
 
@@ -51,16 +51,16 @@ export default {
     },
     TTgenRateText() {
       if (this.theoremGeneration.lt(1 / 3600)) {
-        return `one TT every ${TimeSpan.fromSeconds(
+        return `one 技术转让 every ${TimeSpan.fromSeconds(
           this.theoremGeneration.reciprocal().toNumber()).toStringShort(false)}`;
       }
       if (this.theoremGeneration.lt(0.1)) {
-        return `${format(this.theoremGeneration.times(3600), 2, 2)} TT/hour`;
+        return `${format(this.theoremGeneration.times(3600), 2, 2)} 技术转让/hour`;
       }
-      return `${format(this.theoremGeneration, 2, 2)} TT/sec`;
+      return `${format(this.theoremGeneration, 2, 2)} 技术转让/sec`;
     },
     totalTimeTheoremText() {
-      return `${quantify("total Time Theorem", this.totalTimeTheorems, 2, 2, this.formatTimeTheoremType)}`;
+      return `${quantify("total 光阴法则", this.totalTimeTheorems, 2, 2, this.formatTimeTheoremType)}`;
     },
     minimizeArrowStyle() {
       return {

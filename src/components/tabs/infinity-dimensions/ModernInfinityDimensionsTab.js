@@ -1,4 +1,4 @@
-import InfinityDimensionRow from "./ModernInfinityDimensionRow.js";
+﻿import InfinityDimensionRow from "./ModernInfinityDimensionRow.js";
 import PrimaryButton from "../../PrimaryButton.js";
 
 export default {
@@ -133,15 +133,15 @@ export default {
         <p>
           Buy a Tesseract ({{ tesseractCountString }})
         </p>
-        <p>Increase dimension caps by {{ format(nextDimCapIncrease, 2) }}</p>
-        <p><b>Costs: {{ format(tesseractCost) }} IP</b></p>
+        <p>Increase 尺寸 帽子 by {{ format(nextDimCapIncrease, 2) }}</p>
+        <p><b>Costs: {{ format(tesseractCost) }} 网络地址</b></p>
       </button>
     </div>
     <div v-if="isEnslavedRunning">
-      All Infinity Dimensions are limited to a single purchase.
+      All 无穷提升 are limited to a single purchase.
     </div>
     <div v-else>
-      All Infinity Dimensions except for the 8th are limited to a maximum of {{ format(totalDimCap, 2) }}
+      All 无穷提升 except for the 8th are limited to a maximum of {{ format(totalDimCap, 2) }}
       purchases each.
     </div>
     <div>You are getting {{ format(powerPerSecond, 2, 0) }} {{ incomeType }} per second.</div>
@@ -159,7 +159,7 @@ export default {
       />
     </div>
     <div v-if="showLockedDimCostNote">
-      Hold shift to see the Infinity Point cost for locked Infinity Dimensions.
+      Hold shift to see the 无穷远点 cost for locked 无穷提升.
     </div>
   </div>
   `

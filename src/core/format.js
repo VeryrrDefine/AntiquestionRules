@@ -1,4 +1,4 @@
-function isEND() {
+﻿function isEND() {
   const threshold = GameEnd.endState > END_STATE_MARKERS.END_NUMBERS
     ? 1
     : (GameEnd.endState - END_STATE_MARKERS.FADE_AWAY) / 2;
@@ -152,7 +152,7 @@ window.pluralize = function pluralize(word, amount, plural) {
   const existingPlural = plural ?? pluralDatabase.get(word);
   if (existingPlural !== undefined) return existingPlural;
 
-  const newWord = generatePlural(word);
+  const newWord = word;
   pluralDatabase.set(word, newWord);
   return newWord;
 };

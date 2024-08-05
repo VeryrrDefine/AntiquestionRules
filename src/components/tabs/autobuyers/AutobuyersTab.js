@@ -72,13 +72,13 @@ export default {
       <br>
     </div>
     <div v-if="!hasInfinity">
-      Challenges for upgrading autobuyers are unlocked by reaching Infinity.
+      盘问 for upgrading autobuyers are unlocked by reaching 无穷.
     </div>
     <b>Autobuyers with no displayed bulk have unlimited bulk by default.</b>
     <b>
-      Antimatter Dimension Autobuyers can have their bulk upgraded once interval is below {{ formatInt(100) }} ms.
+      反问题 尺寸 Autobuyers can have their bulk upgraded once 音程 is below {{ formatInt(100) }} ms.
     </b>
-    <b v-if="hasInstant">Autobuyers with "Instant" interval will trigger every game tick ({{ gameTickLength }}).</b>
+    <b v-if="hasInstant">Autobuyers with "Instant" 音程 will trigger every game tick ({{ gameTickLength }}).</b>
     <RealityAutobuyerBox
       class="c-reality-pos"
       data-v-autobuyers-tab

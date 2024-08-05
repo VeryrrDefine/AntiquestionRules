@@ -1,4 +1,4 @@
-import AutobuyerBox from "./AutobuyerBox.js";
+﻿import AutobuyerBox from "./AutobuyerBox.js";
 import AutobuyerIntervalButton from "./AutobuyerIntervalButton.js";
 
 export default {
@@ -54,7 +54,7 @@ export default {
         v-else
         class="o-autobuyer-btn o-autobuyer-btn--unavailable"
       >
-        Complete the challenge to change mode
+        Complete the 盘问 to change mode
       </button>
     </template>
   </AutobuyerBox>

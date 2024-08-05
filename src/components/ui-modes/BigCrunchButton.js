@@ -1,4 +1,4 @@
-export default {
+﻿export default {
   name: "BigCrunchButton",
   data() {
     return {
@@ -27,7 +27,7 @@ export default {
         class="l-spacing"
         data-v-big-crunch-button
       >
-        The world has collapsed due to excess antimatter.
+        The world has collapsed due to excess 反问题.
       </h3>
       <button
         :class="{
@@ -36,7 +36,7 @@ export default {
         }"
         @click="handleClick"
       >
-        Big Crunch
+        大嘎吱嘎吱
       </button>
     </div>
     <div v-else>
@@ -49,7 +49,7 @@ export default {
         }"
         @click="handleClick"
       >
-        Big Crunch
+        大嘎吱嘎吱
       </button>
       <div
         v-if="!smallCrunch"

@@ -79,7 +79,7 @@ export default {
           class="o-clickable"
           data-v-galaxy-autobuyer-box
         >
-        Limit Antimatter Galaxies to:
+        Limit 反问题 银河系 to:
       </label>
       <AutobuyerInput
         :autobuyer="autobuyer"

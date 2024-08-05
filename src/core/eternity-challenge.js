@@ -1,4 +1,4 @@
-import { DC } from "./constants.js";
+﻿import { DC } from "./constants.js";
 import { deepmergeAll } from "../utility/deepmerge.js";
 import { GameMechanicState } from "./game-mechanics/index.js";
 
@@ -250,21 +250,21 @@ export class EternityChallengeState extends GameMechanicState {
     let reason;
     if (auto) {
       if (this.id === 4) {
-        reason = restriction => `Auto Eternity Challenge completion completed ` +
-        `Eternity Challenge ${this.id} and made the next tier ` +
+        reason = restriction => `奥拓 永远 盘问 completion completed ` +
+        `永远 盘问 ${this.id} and made the next tier ` +
         `require having less Infinities (${quantifyInt("Infinity", restriction)} ` +
         `or less) than you had`;
       } else if (this.id === 12) {
-        reason = restriction => `Auto Eternity Challenge completion completed ` +
-        `Eternity Challenge ${this.id} and made the next tier ` +
+        reason = restriction => `Auto 永远 盘问 completion completed ` +
+        `永远 盘问 ${this.id} and made the next tier ` +
         `require spending less time in it (${quantify("in-game second", restriction, 0, 1)} ` +
         `or less) than you had spent`;
       }
     } else if (this.id === 4) {
-      reason = restriction => `You failed Eternity Challenge ${this.id} due to ` +
+      reason = restriction => `You failed 永远 盘问 ${this.id} due to ` +
       `having more than ${quantifyInt("Infinity", restriction)}`;
     } else if (this.id === 12) {
-      reason = restriction => `You failed Eternity Challenge ${this.id} due to ` +
+      reason = restriction => `You failed 永远 盘问 ${this.id} due to ` +
       `spending more than ${quantify("in-game second", restriction, 0, 1)} in it`;
     }
     Modal.message.show(`${reason(this.config.restriction(this.completions))}, ` +

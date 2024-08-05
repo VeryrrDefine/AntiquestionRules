@@ -1,4 +1,4 @@
-import ModalWrapperChoice from "../ModalWrapperChoice.js";
+﻿import ModalWrapperChoice from "../ModalWrapperChoice.js";
 
 export default {
   name: "EternityChallengeStartModal",
@@ -19,29 +19,29 @@ export default {
       return this.challenge.isFullyCompleted;
     },
     message() {
-      return `You will Eternity (if possible) and start a new Eternity within the Challenge, with all the
-        Challenge-specific restrictions and modifiers active.
-        To complete the Challenge${this.challengeIsCompleted ? "" : " and gain its reward"},
-        you must reach the Challenge goal of
-        ${format(this.challenge.currentGoal)} Infinity Points. You can complete Eternity Challenges up to
+      return `You will 永远 (if possible) and start a new 永远 within the 盘问, with all the
+        盘问-specific restrictions and modifiers active.
+        To 完成 the 盘问${this.challengeIsCompleted ? "" : " and gain its reward"},
+        you must reach the 盘问 goal of
+        ${format(this.challenge.currentGoal)} 无穷远点. You can complete 永远 盘问 up to
         ${formatInt(5)} times, with increasing goals and bonuses.`;
     },
     entranceLabel() {
-      return `You are about to enter Eternity Challenge ${this.id}`;
+      return `You are about to enter 永远 盘问 ${this.id}`;
     },
     reward() {
       let rewardDescription = this.challenge._config.reward.description;
       if (typeof rewardDescription === "function") {
         rewardDescription = rewardDescription();
       }
-      return `The reward for completing this challenge is: ${rewardDescription}`;
+      return `The reward for completing this 盘问 is: ${rewardDescription}`;
     },
     condition() {
       let conditionOfChallenge = this.challenge._config.description;
       if (typeof conditionOfChallenge === "function") {
         conditionOfChallenge = conditionOfChallenge();
       }
-      return `Inside this Eternity Challenge, ${conditionOfChallenge}`;
+      return `Inside this 永远 盘问, ${conditionOfChallenge}`;
     }
   },
   created() {

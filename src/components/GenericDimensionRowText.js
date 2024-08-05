@@ -1,4 +1,4 @@
-export default {
+﻿export default {
   name: "GenericDimensionRowText",
   props: {
     tier: {
@@ -30,7 +30,7 @@ export default {
   computed: {
     rateText() {
       return this.rate.neq(0)
-        ? ` (+${format(this.rate, 2, 2)}%/s)`
+        ? ` (*${format(this.rate.div(100).add(1), 2, 2)}/s)`
         : "";
     },
     showPercentage() {

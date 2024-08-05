@@ -1,18 +1,18 @@
-export const teresaQuotes = {
+﻿export const teresaQuotes = {
   initial: {
     id: 0,
     lines: [
       "We have been observing you.",
-      "You have shown promise with your bending of Reality.",
-      "We are the Celestials, and we want you to join us.",
-      "My name is Teresa, the Celestial Of Reality.",
+      "You have shown promise with your bending of 实际.",
+      "We are the 天体, and we want you to join us.",
+      "My name is 有一个, the Celestial Of Reality.",
       "Prove your worth.",
     ]
   },
   unlockReality: {
     id: 1,
     lines: [
-      "I will let you inside my Reality, mortal. Do not get crushed by it."
+      "I will let you inside my 实际, mortal. Do not get crushed by it."
     ]
   },
   completeReality: {

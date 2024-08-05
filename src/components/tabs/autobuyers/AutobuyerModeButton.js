@@ -14,8 +14,8 @@ export default {
   computed: {
     modeDisplay() {
       switch (this.mode) {
-        case AUTOBUYER_MODE.BUY_SINGLE: return "Buys singles";
-        case AUTOBUYER_MODE.BUY_10: return "Buys max";
+        case AUTOBUYER_MODE.BUY_SINGLE: return "买单个";
+        case AUTOBUYER_MODE.BUY_10: return "买最大";
       }
       throw "Unknown Dimension Autobuyer mode";
     }

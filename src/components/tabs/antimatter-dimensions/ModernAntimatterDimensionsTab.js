@@ -1,4 +1,4 @@
-import AntimatterDimensionProgressBar from "./AntimatterDimensionProgressBar.js";
+﻿import AntimatterDimensionProgressBar from "./AntimatterDimensionProgressBar.js";
 import AntimatterDimensionRow from "./ModernAntimatterDimensionRow.js";
 import AntimatterGalaxyRow from "./ModernAntimatterGalaxyRow.js";
 import DimensionBoostRow from "./ModernDimensionBoostRow.js";
@@ -33,7 +33,7 @@ export default {
   },
   computed: {
     sacrificeTooltip() {
-      return `Boosts 8th Antimatter Dimension by ${formatX(this.sacrificeBoost, 2, 2)}`;
+      return `Boosts 8钍 反问题尺寸 by ${formatX(this.sacrificeBoost, 2, 2)}`;
     },
   },
   methods: {
@@ -64,8 +64,8 @@ export default {
       }
     },
     getUntil10Display() {
-      if (this.isContinuumActive) return "Continuum";
-      return this.buyUntil10 ? "Until 10" : "Buy 1";
+      if (this.isContinuumActive) return "连续的";
+      return this.buyUntil10 ? "直到10" : "买1<del>送1</del>";
     },
     update() {
       this.hasDimensionBoosts = player.dimensionBoosts > 0;
@@ -79,7 +79,7 @@ export default {
 
       this.buy10Mult.copyFrom(AntimatterDimensions.buyTenMultiplier);
 
-      this.multiplierText = `Buy 10 Dimension purchase multiplier: ${formatX(this.buy10Mult, 2, 2)}`;
+      this.multiplierText = `买10尺寸付费乘子: ${formatX(this.buy10Mult, 2, 2)}`;
       if (!isSacrificeUnlocked) return;
       this.isSacrificeAffordable = Sacrifice.canSacrifice;
       this.currentSacrifice.copyFrom(Sacrifice.totalBoost);
@@ -99,7 +99,7 @@ export default {
         @click="changeBuyMode"
         data-v-modern-antimatter-dimensions-tab
       >
-        {{ getUntil10Display() }}
+        <span v-html="getUntil10Display()"></span>
       </button>
       <PrimaryButton
         v-show="isSacrificeUnlocked"
@@ -108,15 +108,15 @@ export default {
         class="o-primary-btn--sacrifice"
         @click="sacrifice"
       >
-        <span v-if="isSacrificeAffordable">Dimensional Sacrifice ({{ formatX(sacrificeBoost, 2, 2) }})</span>
-        <span v-else>Dimensional Sacrifice Disabled ({{ disabledCondition }})</span>
+        <span v-if="isSacrificeAffordable">尺寸牺牲 ({{ formatX(sacrificeBoost, 2, 2) }})</span>
+        <span v-else>尺寸牺牲 禁用 ({{ disabledCondition }})</span>
       </PrimaryButton>
       <button
         class="o-primary-btn l-button-container"
         @click="maxAll"
         data-v-modern-antimatter-dimensions-tab
       >
-        Max All (M)
+        最大 全 (M)
       </button>
     </div>
     <span>{{ multiplierText }}</span>
@@ -136,7 +136,7 @@ export default {
         onclick="softReset(-1, true, true)"
       >
         Perform a Dimension Boost reset
-        <span v-if="hasDimensionBoosts"> but lose a Dimension Boost</span>
+        <span v-if="hasDimensionBoosts"> but lose a 方面促进</span>
         <span v-else> for no gain</span>
       </PrimaryButton>
       <AntimatterGalaxyRow />

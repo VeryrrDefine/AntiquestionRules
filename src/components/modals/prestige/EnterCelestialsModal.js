@@ -1,4 +1,4 @@
-import EnterCelestialsRaPet from "./EnterCelestialsRaPet.js";
+﻿import EnterCelestialsRaPet from "./EnterCelestialsRaPet.js";
 import ModalWrapperChoice from "../ModalWrapperChoice.js";
 
 export default {
@@ -37,17 +37,17 @@ export default {
       return description ? description() : "";
     },
     topLabel() {
-      return `${this.name} Reality`;
+      return `${this.name} 实际`;
     },
     message() {
-      return `Perform a Reality reset and enter ${this.name} Reality, in which:`;
+      return `Perform a 实际 reset and enter ${this.name} 实际, in which:`;
     },
     extraLine() {
       switch (this.number) {
         case 0:
           return this.teresaBestAM.eq(1)
-            ? `You have not unlocked the reward for Teresa's Reality yet. Unlocking the reward requires
-              purchasing the Reality study and completing the Reality for the first time.`
+            ? `You have not unlocked the reward for 有一个's 实际 yet. Unlocking the reward requires
+              purchasing the 实际 study and completing the 实际 for the first time.`
             : `Your highest Teresa completion was for ${format(this.teresaBestAM, 2, 2)} antimatter,
               gaining you a ${formatX(this.teresaRunMult, 2)} multiplier to Glyph Sacrifice power.`;
         case 1: return this.effarigDone

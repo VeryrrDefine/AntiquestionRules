@@ -8,7 +8,7 @@ export const vQuotes = {
   unlock: {
     id: 1,
     lines: [
-      "Welcome to my Reality.",
+      "Welcome to my 实际.",
       "I am surprised you could reach it.",
       "This is my realm after all...",
       "Not everyone is as great as me.",
@@ -19,7 +19,7 @@ export const vQuotes = {
     lines: [
       "Good luck with that!",
       "You will need it.",
-      "My reality is flawless. You will fail.",
+      "My 实际 is flawless. You will fail.",
     ],
   },
   realityComplete: {
@@ -52,7 +52,7 @@ export const vQuotes = {
     requirement: () => player.celestials.v.runUnlocks.filter(a => a === 6).length >= 1,
     lines: [
       "Do not think it will get any easier from now on.",
-      "You are awfully proud for such a little achievement.",
+      "You are awfully proud for such a little 成绩.",
     ],
   },
   achievement12: {

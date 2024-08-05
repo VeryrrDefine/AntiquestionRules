@@ -1,4 +1,4 @@
-import { BitUpgradeState, GameMechanicState } from "../../game-mechanics/index.js";
+﻿import { BitUpgradeState, GameMechanicState } from "../../game-mechanics/index.js";
 import { Quotes } from "../quotes.js";
 
 class RaUnlockState extends BitUpgradeState {
@@ -226,8 +226,8 @@ const pets = mapGameDataToObject(
 );
 
 export const Ra = {
-  displayName: "Ra",
-  possessiveName: "Ra's",
+  displayName: "镭",
+  possessiveName: "镭's",
   unlocks,
   pets,
   remembrance: {
