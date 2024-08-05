@@ -1,5 +1,6 @@
 ﻿// These entries describe the special flash-between-celestial effect on some quotes, with the numbers being
 // durations of each celestial in seconds
+/* 本翻译由谷歌生草机赞助播出 */
 const flashCelestial = [
   ["teresa", 0.8],
   ["effarig", 0.8],
@@ -13,34 +14,34 @@ const flashCelestial = [
 const primaryBackground = cel => [["pelle", 1.5], [cel, 1.5]];
 
 /* eslint-disable no-multi-spaces */
-const destroyer =    ["False",         "Deity",         "Destroyer"];
-const eternal =      ["Eternal",       "Deity",         "Monarch"];
-const lesser =       ["Lesser",        "Deity",         "Monarch"];
-const deities =      ["Lesser",        "Deities",       "Monarchs"];
+const destroyer =    ["错误的",         "神",            "驱逐舰"];
+const eternal =      ["永远",       "神",         "辟"];
+const lesser =       ["较小",        "神",         "辟"];
+const deities =      ["较小",        "神",       "辟"];
 
-const assured =      ["Mutually",      "Assured",       "Destruction"];
-const battle =       ["Conflict",      "Battle",        "End"];
-const battles =      ["Conflicts",     "Battles",       "Ends"];
-const cluster =      ["Cluster",       "Filament",      "Stars"];
-const confusing =    ["Amusing",       "Confusing",     "Laughter"];
-const dance =        ["Song",          "Dance",         "Charade"];
-const filament =     ["Generator",     "Filament",      "Stars"];
-const forever =      ["Infinite",      "Forever",       "Eternal"];
-const inevitable =   ["Elementary",    "Inevitable",    "Irreversible"];
-const mandate =      ["Destiny",       "Mandate",       "Goals"];
-const misconstrue =  ["Misconstrue",   "Deceive",       "Trick"];
-const reverse =      ["Alter",         "Reverse",       "Manipulate"];
-const shame =        ["Compassion",    "Shame",         "Idiocy"];
-const single =       ["Single",        "Filament",      "Stars"];
-const unseen =       ["Missing",       "Unseen",        "Erased"];
-const unbroken =     ["Unbroken",      "Eternal",       "Connection"];
+const assured =      ["相互",      "确信",       "毁灭 3,2,1"];
+const battle =       ["意见不合",      "战斗",        "界限"];
+const battles =      ["意见不合",     "战斗",       "界限"];
+const cluster =      ["拥挤",       "灯丝",      "明星"];
+const confusing =    ["扣人心弦",       "令人困惑",     "笑声"];
+const dance =        ["歌",          "舞会",         "猜字谜"];
+const filament =     ["母线",     "灯丝",      "明星"];
+const forever =      ["无穷",      "万古",       "永远"];
+const inevitable =   ["初步",    "必然",    "不可逆转"];
+const mandate =      ["运气",       "授权",       "目标"];
+const misconstrue =  ["错觉",   "作弊",       "特技"];
+const reverse =      ["换车",         "废除",       "操控"];
+const shame =        ["变宽厚",    "墨点儿",         "天然的东西"];
+const single =       ["单曲 精选集",        "灯丝",      "明星"];
+const unseen =       ["小姐",       "看不见",        "已删除"];
+const unbroken =     ["坚不可摧",      "永远",       "关联"];
 
-const sycophant =    ["Sycophant",     "Deity",         "Monarch"];
-const tired =        ["Tired",         "Deity",         "Monarch"];
-const usurper =      ["Usurper",       "Deity",         "Monarch"];
-const pride =        ["Pride",         "Deity",         "Monarch"];
-const forgotten =    ["Forgotten",     "Deity",         "Monarch"];
-const paramount =    ["Paramount",     "Deity",         "Monarch"];
+const sycophant =    ["马屁精",     "神",         "辟"];
+const tired =        ["累",         "神",         "辟"];
+const usurper =      ["篡位者",       "神",         "辟"];
+const pride =        ["使自夸",         "神",         "辟"];
+const forgotten =    ["忘记了",     "神",         "辟"];
+const paramount =    ["派拉蒙",     "神",         "辟"];
 /* eslint-enable no-multi-spaces */
 
 export const pelleQuotes = {
@@ -48,12 +49,12 @@ export const pelleQuotes = {
     id: 0,
     lines: [
       "亻尓女子",
-      "You are here.",
-      "You are trapped here.",
-      { text: "$1.", 1: forever },
-      "I have already won.",
-      "And since that is the case, I can monologue, or reminisce.",
-      { text: "How long have we done this $1?", 1: dance },
+      "你是这里",
+      "你是被困在这里,
+      { text: "$1。", 1: forever },
+      "我有曾经胜利",
+      "和因为那个是这个病例，我头戴耳机独角戏剧本，要不记住",
+      { text: "怎么样渴望拥有我们完结这个$1?", 1: dance },
       "How many times have we been here before?",
       { text: "How many plans have you, the $1, operated?", 1: destroyer },
       { text: "All to try and fulfill your $1?", 1: mandate },
